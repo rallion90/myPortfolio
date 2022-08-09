@@ -24,6 +24,9 @@
 	<!-- Custom styles for this template -->
 	<link href="resume.min.css" rel="stylesheet">
 
+
+	
+
 	<style type="text/css">
 		.navbar {
 			background-color: black;
@@ -43,6 +46,45 @@
 			0% {transform: translateX(-100%);}
 			100% {transform: translateX(0);}
 		}
+
+		.middle {
+
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+
+			top: 35%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+			/* //width: auto; */
+
+		}
+
+		.middle .text{
+			display: inline;
+		}
+
+		.portfolio:hover .image{
+			opacity: 0.3;
+		}
+
+		.portfolio:hover .middle {
+			opacity: 1;
+		}
+
+		.text {
+			/* background-color: #f11e1e; */
+			color: black;
+			width: 30px;
+			height: 30px;
+			font-size: 39px;
+			/* padding: 16px 16px; */
+
+		}
+
+
 	</style>
 
 
@@ -576,59 +618,90 @@
 				<h2 class="mb-5">My Sample Work</h2>
 				<div class="container">
 					<div class="row">
-						<a href="lucy1.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-							<img src="lucy1.png" class="img-fluid rounded">
+						<div class="col-md-4 portfolio">
+							<img src="lucy1.png" class="img-fluid rounded image">
 							<h4>
-								<center>New Classic Design: Phishing</center>
+								<center>Advance Information Security Course</center>
 							</h4>
-						</a>
-						<a href="lucy2.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-							<img src="lucy2.png" class="img-fluid rounded">
+							<div class="middle">
+								<div class="text"><a href="lucy1.png" data-toggle="lightbox" data-gallery="gallery"><i class="fab fa fa-image"></i></a></div><Br/>
+								<div class="text"><a href="https://effulgent-twilight-376052.netlify.app/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio">
+							<img src="lucy2.png" class="img-fluid rounded image">
 							<h4>
-								<center>New Quiz for Classic Design</center>
+								<center>Avatar Malware and Ransomware</center>
 							</h4>
-						</a>
-						<a href="lucy3.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-							<img src="lucy3.png" class="img-fluid rounded">
+
+							<div class="middle">
+								<div class="text"><a href="lucy2.png" data-toggle="lightbox" data-gallery="gallery"><i class="fab fa fa-image"></i></a></div><Br/>
+								<div class="text"><a href="https://loquacious-melomakarona-187f23.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio">
+							<img src="lucy3.png" class="img-fluid rounded image">
 							<h4>
-								<center>Example Certificate</center>
+								<center>5-Minute Phishing Course EN</center>
 							</h4>
-						</a>
+
+							<div class="middle">
+								<div class="text"><a href="lucy3.png" data-toggle="lightbox" data-gallery="gallery"><i class="fab fa fa-image"></i></a></div><Br/>
+								<div class="text"><a href="https://sage-pavlova-48510e.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+							</div>
+						</div>
 					</div>
 					<div class="row">
-						<a href="lucy4.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-							<img src="lucy4.png" class="img-fluid rounded">
+						<div class="col-md-4 portfolio">
+							<img src="lucy4.png" class="img-fluid rounded image">
 							<h4>
-								<center>5-Minute Phishing Simulation</center>
+								<center>5-Minute Phishing Course AR</center>
 							</h4>
-						</a>
-						<a href="lucy5.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-							<img src="lucy5.png" class="img-fluid rounded">
+
+							<div class="middle">
+								<div class="text"><a href="lucy4.png" data-toggle="lightbox" data-gallery="gallery"><i class="fab fa fa-image"></i></a></div><Br/>
+								<div class="text"><a href="https://sage-pavlova-48510e.netlify.app/arabic/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 portfolio">
+							<img src="lucy5.png" class="img-fluid rounded image">
 							<h4>
-								<center>Advance Phishing E-Learning</center>
+								<center>Classic Design Social Networking</center>
 							</h4>
-						</a>
-						<a href="lucy6.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-							<img src="lucy6.png" class="img-fluid rounded">
+
+							<div class="middle">
+								<div class="text"><a href="lucy5.png" data-toggle="lightbox" data-gallery="gallery"><i class="fab fa fa-image"></i></a></div><Br/>
+								<div class="text"><a href="https://zingy-toffee-a27089.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 portfolio">
+							<img src="lucy6.png" class="img-fluid rounded image">
 							<h4>
-								<center>Avatar Phishing E-Learning</center>
+								<center>Classic Design Social Networking</center>
 							</h4>
-						</a>
+
+							<div class="middle">
+								<div class="text"><a href="lucy6.png" data-toggle="lightbox" data-gallery="gallery"><i class="fab fa fa-image"></i></a></div><Br/>
+								<div class="text"><a href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+							</div>
+						</div>
 					</div>
 					<div class="row">
-						<a href="lucy7.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="lucy7.png" class="col-md-4">
 							<img src="lucy7.png" class="img-fluid rounded">
 							<h4>
 								<center>Advance Phishing E-Learning Sample</center>
 							</h4>
 						</a>
-						<a href="lucy8.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="lucy8.png" class="col-md-4">
 							<img src="lucy8.png" class="img-fluid rounded">
 							<h4>
 								<center>New Classic Design Tips Sample</center>
 							</h4>
 						</a>
-						<a href="lucywebsite.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="lucywebsite.png" class="col-md-4">
 							<img src="lucywebsite.png" class="img-fluid rounded">
 							<h4>
 								<center>Lucy Website Course Overview</center>
@@ -637,19 +710,19 @@
 					</div>
 					<!--end-->
 					<div class="row">
-						<a href="palsys.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="palsys.png" class="col-md-4">
 							<img src="palsys.png" class="img-fluid rounded">
 							<h4>
 								<center>Paluwagan System (PALSYS)</center>
 							</h4>
 						</a>
-						<a href="reservation_resort.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="reservation_resort.png" class="col-md-4">
 							<img src="reservation_resort.png" class="img-fluid rounded">
 							<h4>
 								<center>Room and Resort Management System</center>
 							</h4>
 						</a>
-						<a href="salon.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="salon.png" class="col-md-4">
 							<img src="salon.png" class="img-fluid rounded">
 							<h4>
 								<center>Salon Appointment System</center>
@@ -657,19 +730,19 @@
 						</a>
 					</div>
 					<div class="row">
-						<a href="motor.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="motor.png" class="col-md-4">
 							<img src="motor.png" class="img-fluid rounded">
 							<h4>
 								<center>Motorcycle and Bike Parts E Commerce Website</center>
 							</h4>
 						</a>
-						<a href="covid.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="covid.png" class="col-md-4">
 							<img src="covid.png" class="img-fluid rounded">
 							<h4>
 								<center>Covid Tracker (But data Deprecated)</center>
 							</h4>
 						</a>
-						<a href="romres.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+						<a href="romres.png" class="col-md-4">
 							<img src="romres.png" class="img-fluid rounded">
 							<h4>
 								<center>Room Reservation System for the Agents</center>
