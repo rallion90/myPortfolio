@@ -1,0 +1,222 @@
+/*
+// =====================================================
+// For the Cookies popup css
+// https://github.com/wimagguc/jquery-eu-cookie-law-popup
+// ===================================================== */
+.clearfix {
+  clear: both;
+}
+
+.eupopup-container {
+	background-color: rgba(25, 25, 25, .9);
+	color: #efefef;
+	padding: 5px 20px;
+	font-size: 12px;
+	line-height: 1.2em;
+	text-align: center;
+	display: none;
+	z-index: 9999999
+}
+
+.eupopup-container-fixedtop,
+.eupopup-container-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0
+}
+
+.eupopup-container-fixedtop {
+	position: fixed
+}
+
+.eupopup-container-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+.eupopup-container-bottomleft {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 300px
+}
+
+.eupopup-container-bottomright {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 300px
+}
+
+.eupopup-closebutton {
+	font-size: 16px;
+	font-weight: 100;
+	line-height: 1;
+	color: #a2a2a2;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px 10px
+}
+
+.eupopup-closebutton:active,
+.eupopup-closebutton:hover {
+	color: #fff;
+	text-decoration: none
+}
+
+.eupopup-head {
+	font-size: 1.2em;
+	font-weight: 700;
+	padding: 7px;
+	color: #fff
+}
+
+.eupopup-body {
+	color: #a2a2a2
+}
+
+.eupopup-buttons {
+	padding: 7px 0 5px 0
+}
+
+.eupopup-button_1 {
+	color: #f6a21d;
+	font-weight: 700;
+	font-size: 14px
+}
+
+.eupopup-button_2 {
+	color: #f6a21d;
+	font-weight: 400;
+	font-size: 12px
+}
+
+.eupopup-button {
+	margin: 0 10px
+}
+
+.eupopup-button:focus,
+.eupopup-button:hover {
+	text-decoration: underline;
+	color: #f6a21d
+}
+
+body .eupopup-color-inverse {
+	color: #000;
+	background-color: rgba(255, 255, 255, .9)
+}
+
+body .eupopup-color-inverse .eupopup-head {
+	color: #000
+}
+
+body .eupopup-style-compact {
+	text-align: left;
+	padding: 8px 30px 7px 20px;
+	line-height: 15px
+}
+
+body .eupopup-style-compact .eupopup-body,
+body .eupopup-style-compact .eupopup-buttons,
+body .eupopup-style-compact .eupopup-head {
+	display: inline;
+	padding: 0;
+	margin: 0
+}
+
+body .eupopup-style-compact .eupopup-button {
+	margin: 0 5px
+}
+
+.eupopup-container {
+	background-color: rgba(255, 255, 255, .9);
+	-webkit-box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, .1);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: calc((100vw - 1370px)/ 2);
+	padding-right: calc((100vw - 1370px)/ 2);
+	text-align: left
+}
+
+.eupopup-container .eupopup-body {
+	color: #444;
+	font-size: 13px;
+	line-height: 20px;
+	width: 70%;
+	display: inline-block
+}
+
+.eupopup-container .eupopup-closebutton {
+	display: none
+}
+
+.eupopup-container a {
+	color: #34bdc7
+}
+
+.eupopup-container .eupopup-buttons {
+	float: right;
+	margin-top: 7px;
+	margin-right: 10px
+}
+
+.eupopup-container a.eupopup-button {
+	border: 1px solid #34bdc7;
+	color: #fff !important;
+	background-color: #34bdc7;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.15;
+	cursor: pointer;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px 20px;
+	border-bottom: 0;
+	text-decoration: none
+}
+
+.eupopup-container a.eupopup-button:hover {
+	border: 1px solid #34bdc7;
+	background-color: transparent;
+	color: #3c3c3c !important
+}
+
+@media (max-width:1450px) {
+	.eupopup-container {
+			padding: 15px 4%
+	}
+}
+
+@media (max-width:1200px) {
+	.eupopup-container .eupopup-body {
+			width: 80%
+	}
+}
+
+@media (max-width:767px) {
+	.eupopup-container {
+			padding: 15px;
+			padding-right: 30px
+	}
+
+	.eupopup-container .eupopup-body {
+			width: 100%
+	}
+
+	.eupopup-container .eupopup-buttons {
+			display: inline-block;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15px;
+			margin-left: -10px
+	}
+}
