@@ -970,7 +970,14 @@
 					<li>
 						<i class="fa-li fa fa-trophy text-warning"></i>
 
-						CompTia Security+ (SY0-701) Certificate Code: <a href="javascript:void(0);" id="copyMe">H75ZJSYRD1V4QBWT</a> <span class="copy-status"></span>
+						CompTIA Security+ (SY0-701) Certificate Code: <a href="javascript:void(0);" id="copyMe">H75ZJSYRD1V4QBWT</a> <span class="copy-status"></span>
+						
+					</li>
+
+					<li>
+						<i class="fa-li fa fa-trophy text-warning"></i>
+
+						CompTIA Network+ (N10-009) Certificate Code: <a href="javascript:void(0);" id="copyMe2">G67GNE0Q52BE10SC</a> <span class="copy-status2"></span>
 						
 					</li>
 
@@ -1594,9 +1601,35 @@
 		document.body.removeChild(tempTextArea);
 
 		// Provide some visual feedback to the user
-		$('.copy-status').html('Copied! <a href="http://verify.CompTIA.org">Click here to verify</a>');
+		$('.copy-status').html('Copied! <a href="https://www.certmetrics.com/comptia/public/verification.aspx/">Click here to verify</a>');
 		
 	});
+
+	document.getElementById("copyMe2").addEventListener("click", function() {
+		// Select the text within the element
+		var textToCopy = this.innerText;
+
+		// Create a temporary textarea element
+		var tempTextArea = document.createElement("textarea");
+		tempTextArea.value = textToCopy;
+
+		// Append the textarea to the body
+		document.body.appendChild(tempTextArea);
+
+		// Select the text within the textarea
+		tempTextArea.select();
+
+		// Copy the selected text to the clipboard
+		document.execCommand("copy");
+
+		// Remove the temporary textarea
+		document.body.removeChild(tempTextArea);
+
+		// Provide some visual feedback to the user
+		$('.copy-status2').html('Copied! <a href="https://www.certmetrics.com/comptia/public/verification.aspx/">Click here to verify</a>');
+		
+	});
+
 
 	
 
