@@ -5,10 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="description" content="Howdy! You found me, I'm a web developer with over three years of experience in building powerful backend systems. My journey in tech has been all about learning and finding new solutions that fit my clients' needs.">
-    <meta name="keywords" content="Ralph Rallion Laynes, Portfolio, REST API, Web Development, Software Engineering, Projects">
-    <meta name="author" content="Ralph Rallion Laynes">
-    <link rel="canonical" href="https://rallion90.github.io/myPortfolio/index.html">
+	<meta name="description"
+		content="Howdy! You found me, I'm a web developer with over three years of experience in building powerful backend systems. My journey in tech has been all about learning and finding new solutions that fit my clients' needs.">
+	<meta name="keywords"
+		content="Ralph Rallion Laynes, Portfolio, REST API, Web Development, Software Engineering, Projects">
+	<meta name="author" content="Ralph Rallion Laynes">
+	<link rel="canonical" href="https://rallion90.github.io/myPortfolio/index.html">
 
 	<meta name="robots" content="index, follow">
 
@@ -48,9 +50,15 @@
 			animation-timing-function: ease-in;
 			animation-duration: .9s;
 		}
+
 		@keyframes animateBar {
-			0% {transform: translateX(-100%);}
-			100% {transform: translateX(0);}
+			0% {
+				transform: translateX(-100%);
+			}
+
+			100% {
+				transform: translateX(0);
+			}
 		}
 
 		.middle {
@@ -68,11 +76,11 @@
 
 		}
 
-		.middle .text{
+		.middle .text {
 			display: inline;
 		}
 
-		.portfolio:hover .image{
+		.portfolio:hover .image {
 			opacity: 0.3;
 		}
 
@@ -91,19 +99,32 @@
 		}
 
 		/* Custom Styles */
-        .modal-content {
-            background-color: black;
-            color: white;
-        }
-        .modal-header {
-            background-color: red;
-            border: none;
-        }
-        .modal-title {
-            color: white;
-        }
+		.modal-content {
+			background-color: black;
+			color: white;
+		}
 
+		.modal-header {
+			background-color: red;
+			border: none;
+		}
 
+		.modal-title {
+			color: white;
+		}
+
+		.tech-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tech-img {
+  height: 20px;          /* 👈 MATCHES FA ICON VISUAL SIZE */
+  width: auto;
+  filter: grayscale(100%) brightness(0.65);
+  opacity: 0.85;
+  vertical-align: middle;
+}
 	</style>
 
 
@@ -132,7 +153,8 @@
 					<a class="nav-link js-scroll-trigger" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" target="_blank" href="RalphRallion_Laynes_Resume.pdf">Download CV</a>
+					<a class="nav-link js-scroll-trigger" target="_blank" href="RalphRallion_Laynes_Resume.pdf">Download
+						CV</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
@@ -140,7 +162,7 @@
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#events">Conference/Events Participation</a>
 				</li>
-				
+
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#education">Education</a>
 				</li>
@@ -174,24 +196,31 @@
 				<h1 class="mb-0">RALPH RALLION
 					<span class="text-primary">LAYNES</span>
 				</h1>
-				<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4199963" style='border:none;width:100%;height:100px;'></iframe>
+				<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4199963"
+					style='border:none;width:100%;height:100px;'></iframe>
 				<div class="subheading mb-5">Laravel Developer · CodeIgniter Developer · Intermediate PHP Programmer · 4
 					years experience <br>
 					<a href="mailto:ralphlaynes@gmail.com">ralphlaynes@gmail.com</a>
 					<p>Springs 4, Street 8 Villa 16, Dubai, UAE <br>
-						(+971) 55 162 0531 <br/>
+						(+971) 55 162 0531 <br />
 						My Whats App Contact #: (+971) 55 162 0531
 					</p>
-					
+
 
 				</div>
-				
+
 				<p class="lead mb-5 text-justify">
-					I'm a web developer with over four years of experience in building powerful backend systems. Recently, I've taken up cybersecurity as a hobby and even passed the Security+ exam. My journey in tech has been all about learning and finding new solutions that fit my clients' needs. I'm excited to combine my web development skills with my newfound interest in cybersecurity to create secure and innovative solutions for today's challenges.
-					<a href="#" data-toggle="modal" data-target="#read-more">Do you want to know my skills more? Click it here</a>
+					I'm a web developer with over four years of experience in building powerful backend systems.
+					Recently, I've taken up cybersecurity as a hobby and even passed the Security+ exam. My journey in
+					tech has been all about learning and finding new solutions that fit my clients' needs. I'm excited
+					to combine my web development skills with my newfound interest in cybersecurity to create secure and
+					innovative solutions for today's challenges.
+					<a href="#" data-toggle="modal" data-target="#read-more">Do you want to know my skills more? Click
+						it here</a>
 				</p>
 
-				<div class="modal fade" id="read-more" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal fade" id="read-more" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -203,41 +232,51 @@
 							<div class="modal-body">
 								<!-- Place your long text content here -->
 								<p>
-									I thrive in the realm of backend development, where the magic happens behind the scenes.
-									It's here that I find my passion and purpose, solving intricate challenges with 
-									elegant solutions. Armed with a profound understanding of Object-Oriented Programming
-									(OOP) concepts, I am well-versed in the art of crafting clean, secure, maintainable, and 
+									I thrive in the realm of backend development, where the magic happens behind the
+									scenes.
+									It's here that I find my passion and purpose, solving intricate challenges with
+									elegant solutions. Armed with a profound understanding of Object-Oriented
+									Programming
+									(OOP) concepts, I am well-versed in the art of crafting clean, secure, maintainable,
+									and
 									reusable code. My approach isn't just about solving immediate problems; it's about
-									ensuring a seamless development experience for the entire team, from start to finish.<br/><br/>
-									   
-									I also Proficient in WordPress, I specialize in creating, customizing, and optimizing
-									websites. With the ability to modify themes, update content, and troubleshoot 
+									ensuring a seamless development experience for the entire team, from start to
+									finish.<br /><br />
+
+									I also Proficient in WordPress, I specialize in creating, customizing, and
+									optimizing
+									websites. With the ability to modify themes, update content, and troubleshoot
 									issues, I ensure that websites not only look great but also function flawlessly.
-									My skills are dedicated to enhancing the digital presence of businesses and 
-									individuals, resulting in well-crafted, reliable WordPress websites.<br/><br/>
+									My skills are dedicated to enhancing the digital presence of businesses and
+									individuals, resulting in well-crafted, reliable WordPress websites.<br /><br />
 
-									I'm passionate about transforming complex requirements into efficient, backend 
-									solutions, and I'm excited to continue this journey of innovation and 
-									problem-solving. If you're seeking a developer who's not just proficient 
-									but truly passionate about delivering top-tier web applications, 
-									I'm here to be a valuable asset to your team.<br/><br/>
+									I'm passionate about transforming complex requirements into efficient, backend
+									solutions, and I'm excited to continue this journey of innovation and
+									problem-solving. If you're seeking a developer who's not just proficient
+									but truly passionate about delivering top-tier web applications,
+									I'm here to be a valuable asset to your team.<br /><br />
 
-									I possess a strong foundation in cybersecurity skills, having successfully 
-									completed the Security+ certification. My expertise includes understanding 
-									fundamental security concepts, implementing best practices for network security, 
-									conducting risk assessments, and implementing various cryptographic techniques. 
-									Additionally, I am proficient in identifying and mitigating security threats, 
-									analyzing security incidents, and implementing proper incident response procedures. 
-									With a solid understanding of security principles and practical skills in safeguarding 
-									systems and networks, I am well-equipped to contribute to ensuring the confidentiality, 
-									integrity, and availability of sensitive information in any organization to protect it from
-									changing today's technology.<br/><br/>
+									I possess a strong foundation in cybersecurity skills, having successfully
+									completed the Security+ certification. My expertise includes understanding
+									fundamental security concepts, implementing best practices for network security,
+									conducting risk assessments, and implementing various cryptographic techniques.
+									Additionally, I am proficient in identifying and mitigating security threats,
+									analyzing security incidents, and implementing proper incident response procedures.
+									With a solid understanding of security principles and practical skills in
+									safeguarding
+									systems and networks, I am well-equipped to contribute to ensuring the
+									confidentiality,
+									integrity, and availability of sensitive information in any organization to protect
+									it from
+									changing today's technology.<br /><br />
 
-									Feel free to contact me: <a href="tel:+971551620531">(+971) 55 162 0531</a> or Email me at: <a href="mailto:ralphlaynes@gmail.com">ralphlaynes@gmail.com</a>
+									Feel free to contact me: <a href="tel:+971551620531">(+971) 55 162 0531</a> or Email
+									me at: <a href="mailto:ralphlaynes@gmail.com">ralphlaynes@gmail.com</a>
 								</p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: red; color: white;">Close</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal"
+									style="background-color: red; color: white;">Close</button>
 							</div>
 						</div>
 					</div>
@@ -273,7 +312,7 @@
 							<li>
 								Creating Website for the clients need.
 							</li>
-							
+
 							<li>
 								Analyze client need to determine technical requirements.
 							</li>
@@ -283,19 +322,19 @@
 							<li>
 								Create a functional system design architecture based on given requirements.
 							</li>
-							
+
 							<li>
 								Translating Website content to specific languages.
 							</li>
-							
-							
+
+
 						</ul>
 					</div>
 					<div class="resume-date text-md-right">
 						<span class="text-primary">September 27, 2022 - Present</span>
 					</div>
 				</div>
-				
+
 				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
 					<div class="resume-content">
 						<h3 class="mb-0">Web Developer</h3>
@@ -337,7 +376,7 @@
 						<span class="text-primary">April 28, 2020 - August 16, 2022</span>
 					</div>
 				</div>
-				
+
 				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
 					<div class="resume-content">
 						<h3 class="mb-0">Web Developer</h3>
@@ -364,7 +403,7 @@
 						<span class="text-primary">September 16, 2019 - March 23, 2020</span>
 					</div>
 				</div>
-				
+
 				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
 					<div class="resume-content">
 						<h3 class="mb-0">Web Developer Intern</h3>
@@ -427,9 +466,9 @@
 
 
 
-				
 
-				
+
+
 
 			</div>
 
@@ -452,7 +491,8 @@
 								Developed and maintained the official website for the congress.
 							</li>
 							<li>
-								Designed and implemented a custom event management system for participant registration, session scheduling, and data handling.
+								Designed and implemented a custom event management system for participant registration,
+								session scheduling, and data handling.
 							</li>
 							<li>
 								Analyzed client needs to determine technical requirements and system functionalities.
@@ -461,13 +501,16 @@
 								Created a functional system architecture based on specified requirements.
 							</li>
 							<li>
-								Managed and coordinated front desk operations, handling volunteer assignments and ensuring smooth event execution.
+								Managed and coordinated front desk operations, handling volunteer assignments and
+								ensuring smooth event execution.
 							</li>
 							<li>
-								Assisted speakers with technical setups, presentation coordination, and logistical support during the event.
+								Assisted speakers with technical setups, presentation coordination, and logistical
+								support during the event.
 							</li>
 							<li>
-								Provided technical support during the event to ensure seamless user experience and system reliability.
+								Provided technical support during the event to ensure seamless user experience and
+								system reliability.
 							</li>
 							<li>
 								Translated website content into specific languages for better accessibility.
@@ -488,7 +531,8 @@
 								Developed and maintained the official website for the conference.
 							</li>
 							<li>
-								Designed and implemented a custom event management system for participant registration, session scheduling, and data handling.
+								Designed and implemented a custom event management system for participant registration,
+								session scheduling, and data handling.
 							</li>
 							<li>
 								Analyzed client needs to determine technical requirements and system functionalities.
@@ -497,13 +541,16 @@
 								Created a functional system architecture based on specified requirements.
 							</li>
 							<li>
-								Managed and coordinated front desk operations, handling volunteer assignments and ensuring smooth event execution.
+								Managed and coordinated front desk operations, handling volunteer assignments and
+								ensuring smooth event execution.
 							</li>
 							<li>
-								Assisted speakers with technical setups, presentation coordination, and logistical support during the event.
+								Assisted speakers with technical setups, presentation coordination, and logistical
+								support during the event.
 							</li>
 							<li>
-								Provided technical support during the event to ensure seamless user experience and system reliability.
+								Provided technical support during the event to ensure seamless user experience and
+								system reliability.
 							</li>
 							<li>
 								Translated website content into specific languages for better accessibility.
@@ -524,7 +571,8 @@
 								Developed and maintained the official website for the conference.
 							</li>
 							<li>
-								Designed and implemented a custom event management system for participant registration, session scheduling, and data handling.
+								Designed and implemented a custom event management system for participant registration,
+								session scheduling, and data handling.
 							</li>
 							<li>
 								Analyzed client needs to determine technical requirements and system functionalities.
@@ -533,10 +581,12 @@
 								Created a functional system architecture based on specified requirements.
 							</li>
 							<li>
-								Managed and coordinated front desk operations, handling volunteer assignments and ensuring smooth event execution.
+								Managed and coordinated front desk operations, handling volunteer assignments and
+								ensuring smooth event execution.
 							</li>
 							<li>
-								Provided technical support during the event to ensure seamless user experience and system reliability.
+								Provided technical support during the event to ensure seamless user experience and
+								system reliability.
 							</li>
 							<li>
 								Translated website content into specific languages for better accessibility.
@@ -547,7 +597,7 @@
 						<span class="text-primary">February 2024</span>
 					</div>
 				</div>
-				
+
 				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
 					<div class="resume-content">
 						<h3 class="mb-0">Sheikh Zayed International Awards</h3>
@@ -557,7 +607,8 @@
 								Designed and developed the official website for the Sheikh Zayed Awards.
 							</li>
 							<li>
-								Created a custom event management system for award nominations, participant registration, and scheduling.
+								Created a custom event management system for award nominations, participant
+								registration, and scheduling.
 							</li>
 							<li>
 								Ensured the system's functionality met the specific needs of the awards process.
@@ -581,7 +632,8 @@
 						<div class="subheading mb-3">Event Management System Developer</div>
 						<ul class="text-justify">
 							<li>
-								Designed and implemented a custom event management system for participant registration, scheduling, and data handling.
+								Designed and implemented a custom event management system for participant registration,
+								scheduling, and data handling.
 							</li>
 							<li>
 								Developed features to streamline event logistics and improve attendee experience.
@@ -598,8 +650,8 @@
 						<span class="text-primary">April 2024</span>
 					</div>
 				</div>
-				
-				
+
+
 			</div>
 
 
@@ -705,7 +757,9 @@
 					<li class="list-inline-item">
 						<i class="fab fa-vuejs"></i>
 					</li>
+
 					
+
 				</ul>
 
 				<div class="row">
@@ -745,8 +799,8 @@
 						<div class="prog">
 							<label for="">JavaScript</label>
 							<div class="progress">
-								<div class="progress-bar" style="width:60%;" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-									aria-valuemax="100"></div>
+								<div class="progress-bar" style="width:60%;" role="progressbar" aria-valuenow="75"
+									aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
 
@@ -798,7 +852,7 @@
 							</div>
 						</div>
 
-						
+
 
 
 					</div>
@@ -884,16 +938,29 @@
 							</div>
 						</div>
 
-						
+						<div class="prog">
+							<label for="">Workflow Auomation (N8N, Zapier)</label>
+							<div class="progress">
+								<div class="progress-bar" style="width:80%" role="progressbar" aria-valuenow="75"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+
+
 					</div>
 				</div>
 
 				<br>
 				<div class="subheading mb-3">Workflow</div>
 				<ul class="fa-ul mb-0">
+
 					<li>
 						<i class="fa-li fa fa-check"></i>
 						Proficient in designing and developing RESTful APIs.
+					</li>
+					<li>
+						<i class="fa-li fa fa-check"></i>
+						Implementing AI to automate tasks, decision, or workflows.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
@@ -963,15 +1030,17 @@
 					<li>
 						<i class="fa-li fa fa-trophy text-warning"></i>
 
-						CompTIA Security+ (SY0-701) Certificate Code: <a href="javascript:void(0);" id="copyMe">H75ZJSYRD1V4QBWT</a> <span class="copy-status"></span>
-						
+						CompTIA Security+ (SY0-701) Certificate Code: <a href="javascript:void(0);"
+							id="copyMe">H75ZJSYRD1V4QBWT</a> <span class="copy-status"></span>
+
 					</li>
 
 					<li>
 						<i class="fa-li fa fa-trophy text-warning"></i>
 
-						CompTIA Network+ (N10-009) Certificate Code: <a href="javascript:void(0);" id="copyMe2">G67GNE0Q52BE10SC</a> <span class="copy-status2"></span>
-						
+						CompTIA Network+ (N10-009) Certificate Code: <a href="javascript:void(0);"
+							id="copyMe2">G67GNE0Q52BE10SC</a> <span class="copy-status2"></span>
+
 					</li>
 
 					<li>
@@ -1035,8 +1104,9 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://ai-linguisticsconference.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://ai-linguisticsconference.com/"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 
@@ -1051,13 +1121,14 @@
 									<a href="#gallery-7" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://www.sheikhzayedinternationalawards.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a href="https://www.sheikhzayedinternationalawards.com/"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 
-						
+
 
 						<div class="col-md-4 portfolio">
 							<img src="tolerance-conference.png" alt="course-overview" class="img-fluid rounded image">
@@ -1066,12 +1137,13 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://idctconference.org"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://idctconference.org"><i class="fab fa fa-eye"></i></a>
+								</div>
 							</div>
 						</div>
-						
-					
+
+
 					</div>
 
 					<div class="row">
@@ -1082,20 +1154,23 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://citescholar.com/portal/public/login?event=eyJpdiI6IlJsSFpsRDRZT1RrUTlnY1NuVVhHNlE9PSIsInZhbHVlIjoibXpuZjVLVE90MTA5M0FxTlVBUlVIUT09IiwibWFjIjoiODY2YWFmMDRjN2FhOWQyNDU0MDYxODdmMzQ5YTA2MmNjMTU0NDIwMGVjNDBmYzEyYmE3ZGU5NDgyN2E4N2E4YSIsInRhZyI6IiJ9"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a
+										href="https://citescholar.com/portal/public/login?event=eyJpdiI6IlJsSFpsRDRZT1RrUTlnY1NuVVhHNlE9PSIsInZhbHVlIjoibXpuZjVLVE90MTA5M0FxTlVBUlVIUT09IiwibWFjIjoiODY2YWFmMDRjN2FhOWQyNDU0MDYxODdmMzQ5YTA2MmNjMTU0NDIwMGVjNDBmYzEyYmE3ZGU5NDgyN2E4N2E4YSIsInRhZyI6IiJ9"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
-						
+
 						<div class="col-md-4 portfolio">
-							<img src="euro-arabmed.png"  class="img-fluid rounded image">
+							<img src="euro-arabmed.png" class="img-fluid rounded image">
 							<h4>
 								<center>Euro Arab Medical Congress Wordpress Website</center>
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://euroarabmed.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://euroarabmed.com/"><i class="fab fa fa-eye"></i></a>
+								</div>
 							</div>
 						</div>
 
@@ -1106,8 +1181,9 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://sharjahlinguistic.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://sharjahlinguistic.com/"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 					</div>
@@ -1122,13 +1198,14 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://bellaroma.ae/booking/index-en.php"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://bellaroma.ae/booking/index-en.php"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
-						
-						
-						
+
+
+
 
 						<div class="col-md-4 portfolio">
 							<img src="course_overview-banner.png" alt="course-overview" class="img-fluid rounded image">
@@ -1137,8 +1214,9 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://lucysecurity.com/course-overview/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://lucysecurity.com/course-overview/"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 
@@ -1153,9 +1231,10 @@
 									<a href="#gallery-8" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://pinoyluckydraws.com"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a href="https://pinoyluckydraws.com"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 					</div>
@@ -1168,11 +1247,12 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://emiratesscholar.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://emiratesscholar.com/"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
-						
+
 						<div class="col-md-4 portfolio">
 							<img src="geminosgroup.png" alt="course-overview" class="img-fluid rounded image">
 							<h4>
@@ -1180,7 +1260,7 @@
 							</h4>
 
 							<div class="middle">
-								
+
 								<div class="text"><a href="https://geminos.ae/"><i class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
@@ -1192,8 +1272,9 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://chicservices.ae"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://chicservices.ae"><i class="fab fa fa-eye"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1205,11 +1286,12 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://lawfinderapp.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://lawfinderapp.com/"><i class="fab fa fa-eye"></i></a>
+								</div>
 							</div>
 						</div>
-						
+
 						<div class="col-md-4 portfolio">
 							<img src="redtie.png" alt="course-overview" class="img-fluid rounded image">
 							<h4>
@@ -1217,8 +1299,9 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://redtiehrm.com/"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a href="https://redtiehrm.com/"><i class="fab fa fa-eye"></i></a>
+								</div>
 							</div>
 						</div>
 
@@ -1229,14 +1312,14 @@
 							</h4>
 
 							<div class="middle">
-								
+
 								<div class="text"><a href="https://bellaroma.ae"><i class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 portfolio">
-							
+
 							<img src="banner-1.png" class="img-fluid rounded image">
 							<h4>
 								<center>Advance Information Security Course</center>
@@ -1246,11 +1329,13 @@
 									<a href="#gallery-1" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://effulgent-twilight-376052.netlify.app/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a
+										href="https://effulgent-twilight-376052.netlify.app/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
-							
+
 						</div>
 						<div class="col-md-4 portfolio">
 							<img src="banner-2.png" class="img-fluid rounded image">
@@ -1263,9 +1348,11 @@
 									<a href="#gallery-2" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://loquacious-melomakarona-187f23.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a
+										href="https://loquacious-melomakarona-187f23.netlify.app/english/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 						<div class="col-md-4 portfolio">
@@ -1279,9 +1366,11 @@
 									<a href="#gallery-3" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://sage-pavlova-48510e.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a
+										href="https://sage-pavlova-48510e.netlify.app/english/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 					</div>
@@ -1297,12 +1386,14 @@
 									<a href="#gallery-4" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://sage-pavlova-48510e.netlify.app/arabic/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a
+										href="https://sage-pavlova-48510e.netlify.app/arabic/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
-						
+
 						<div class="col-md-4 portfolio">
 							<img src="banner-5.png" class="img-fluid rounded image">
 							<h4>
@@ -1314,12 +1405,14 @@
 									<a href="#gallery-5" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://zingy-toffee-a27089.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a
+										href="https://zingy-toffee-a27089.netlify.app/english/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
-						
+
 						<div class="col-md-4 portfolio">
 							<img src="banner-6.png" class="img-fluid rounded image">
 							<h4>
@@ -1331,9 +1424,11 @@
 									<a href="#gallery-6" class="btn-gallery">
 										<i class="fab fa fa-image"></i>
 									</a>
-									
-								</div><Br/>
-								<div class="text"><a href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								</div><Br />
+								<div class="text"><a
+										href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 					</div>
@@ -1366,7 +1461,7 @@
 							</h4>
 
 							<div class="middle">
-								
+
 								<div class="text"><a href="#" style="font-size: 13px;">No Repositories or Link</a></div>
 							</div>
 						</div>
@@ -1376,8 +1471,10 @@
 								<center>Room and Resort Management System</center>
 							</h4>
 							<div class="middle">
-								
-								<div class="text"><a href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html"><i class="fab fa fa-eye"></i></a></div>
+
+								<div class="text"><a
+										href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html"><i
+											class="fab fa fa-eye"></i></a></div>
 							</div>
 						</div>
 						<div class="col-md-4 portfolio">
@@ -1387,72 +1484,77 @@
 							</h4>
 
 							<div class="middle">
-								
-								<div class="text"><a href="https://github.com/rallion90/SalonManagement"><i class="fab fa-git-alt"></i></a></div>
+
+								<div class="text"><a href="https://github.com/rallion90/SalonManagement"><i
+											class="fab fa-git-alt"></i></a></div>
 							</div>
-						</a>
+							</a>
+						</div>
+						<div class="row">
+							<div class="col-md-4 portfolio">
+								<img src="motor.png" class="img-fluid rounded image">
+								<h4>
+									<center>Motorcycle and Bike Parts E Commerce Website</center>
+								</h4>
+
+								<div class="middle">
+
+									<div class="text"><a href="https://github.com/rallion90/LimboBros"><i
+												class="fab fa-git-alt"></i></a></div>
+								</div>
+							</div>
+							<div class="col-md-4 portfolio">
+								<img src="covid.png" class="img-fluid rounded image">
+								<h4>
+									<center>Covid Tracker (But data Deprecated)</center>
+								</h4>
+
+								<div class="middle">
+
+									<div class="text"><a href="#" style="font-size: 13px;">No Repositories or Link</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 portfolio">
+								<img src="romres.png" class="img-fluid rounded image">
+								<h4>
+									<center>Room Reservation System for the Agents</center>
+								</h4>
+
+								<div class="middle">
+
+									<div class="text"><a href="https://github.com/rallion90/ResortReservation"><i
+												class="fab fa-git-alt"></i></a></div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row">
+							<div class="col-md-4 portfolio">
+								<img src="kevin-banner.png" class="img-fluid rounded image">
+								<h4>
+									<center>Kevin Web Page</center>
+								</h4>
+
+								<div class="middle">
+
+									<div class="text"><a href="https://security-awareness.page/"><i
+												class="fab fa fa-eye"></i></a></div>
+								</div>
+							</div>
+
+
+
+
+						</div>
+
+
+
+
 					</div>
-					<div class="row">
-						<div class="col-md-4 portfolio">
-							<img src="motor.png" class="img-fluid rounded image">
-							<h4>
-								<center>Motorcycle and Bike Parts E Commerce Website</center>
-							</h4>
 
-							<div class="middle">
-								
-								<div class="text"><a href="https://github.com/rallion90/LimboBros"><i class="fab fa-git-alt"></i></a></div>
-							</div>
-						</div>
-						<div class="col-md-4 portfolio">
-							<img src="covid.png" class="img-fluid rounded image">
-							<h4>
-								<center>Covid Tracker (But data Deprecated)</center>
-							</h4>
-
-							<div class="middle">
-								
-								<div class="text"><a href="#" style="font-size: 13px;">No Repositories or Link</a></div>
-							</div>
-						</div>
-						<div class="col-md-4 portfolio">
-							<img src="romres.png" class="img-fluid rounded image">
-							<h4>
-								<center>Room Reservation System for the Agents</center>
-							</h4>
-
-							<div class="middle">
-								
-								<div class="text"><a href="https://github.com/rallion90/ResortReservation"><i class="fab fa-git-alt"></i></a></div>
-							</div>
-						</div>
-						
-					</div>
-					
-					<div class="row">
-						<div class="col-md-4 portfolio">
-							<img src="kevin-banner.png" class="img-fluid rounded image">
-							<h4>
-								<center>Kevin Web Page</center>
-							</h4>
-
-							<div class="middle">
-								
-								<div class="text"><a href="https://security-awareness.page/"><i class="fab fa fa-eye"></i></a></div>
-							</div>
-						</div>
-						
-						
-
-						
-					</div>
-
-				
-
-					
 				</div>
-
-			</div>
 		</section>
 
 		<hr class="m-0">
@@ -1548,16 +1650,16 @@
 <script>
 
 
-	$(document).ready(function(){
-		
-		$('a.btn-gallery').on('click', function(event){
+	$(document).ready(function () {
+
+		$('a.btn-gallery').on('click', function (event) {
 			event.preventDefault();
 
 			var gallery = $(this).attr('href');
 
 			$(gallery).magnificPopup({
 				delegate: 'a',
-				type:'image',
+				type: 'image',
 				gallery: {
 					enabled: true
 				}
@@ -1571,9 +1673,9 @@
 			loop: true
 		});
 	});
-	
 
-	document.getElementById("copyMe").addEventListener("click", function() {
+
+	document.getElementById("copyMe").addEventListener("click", function () {
 		// Select the text within the element
 		var textToCopy = this.innerText;
 
@@ -1595,10 +1697,10 @@
 
 		// Provide some visual feedback to the user
 		$('.copy-status').html('Copied! <a href="https://www.certmetrics.com/comptia/public/verification.aspx/">Click here to verify</a>');
-		
+
 	});
 
-	document.getElementById("copyMe2").addEventListener("click", function() {
+	document.getElementById("copyMe2").addEventListener("click", function () {
 		// Select the text within the element
 		var textToCopy = this.innerText;
 
@@ -1620,11 +1722,40 @@
 
 		// Provide some visual feedback to the user
 		$('.copy-status2').html('Copied! <a href="https://www.certmetrics.com/comptia/public/verification.aspx/">Click here to verify</a>');
-		
+
 	});
 
+	(function () {
+		
+		const visit = {
+			time: new Date().toISOString(),
+			page: window.location.pathname,
+			referrer: document.referrer || "direct",
+			device: /mobile/i.test(navigator.userAgent) ? "mobile" : "desktop",
+			screen: `${screen.width}x${screen.height}`,
+			userAgent: navigator.userAgent,
+			language: navigator.language
+		};
 
-	
+		// recruiter score
+		let score = 0;
+		if (visit.referrer.includes("linkedin.com")) score += 3;
+		if (visit.device === "desktop") score += 2;
+		if (screen.width >= 1200) score += 2;
+		if (visit.page.includes("project")) score += 2;
+		if (visit.page.includes("cv")) score += 3;
+
+		visit.recruiterScore = score;
+
+		fetch("https://jateme.app.n8n.cloud/webhook-test/6efd9cc2-cb11-417b-a78e-5afcf752ff31", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(visit)
+		});
+		})();
+
+
+
 
 
 </script>
