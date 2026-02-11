@@ -114,79 +114,115 @@
 		}
 
 		.tech-item {
-  display: inline-flex;
-  align-items: center;
-}
+			display: inline-flex;
+			align-items: center;
+		}
 
-.tech-img {
-  height: 20px;          /* 👈 MATCHES FA ICON VISUAL SIZE */
-  width: auto;
-  filter: grayscale(100%) brightness(0.65);
-  opacity: 0.85;
-  vertical-align: middle;
-}
+		.tech-img {
+			height: 20px;
+			/* 👈 MATCHES FA ICON VISUAL SIZE */
+			width: auto;
+			filter: grayscale(100%) brightness(0.65);
+			opacity: 0.85;
+			vertical-align: middle;
+		}
 
-.portfolio {
-    margin-bottom: 30px;
-}
+		.portfolio {
+			margin-bottom: 30px;
+		}
 
-.portfolio-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-}
+		.portfolio-card {
+			background: #ffffff;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			height: 100%;
+		}
 
-.portfolio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-}
+		.portfolio-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+		}
 
-.portfolio-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
+		.portfolio-image {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+		}
 
-.portfolio-content {
-    padding: 20px;
-    text-align: center;
-}
+		.portfolio-content {
+			padding: 20px;
+			text-align: center;
+		}
 
-.portfolio-content h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #1f2937;
-}
+		.portfolio-content h4 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 10px;
+			color: #1f2937;
+		}
 
-.portfolio-content p {
-    font-size: 14px;
-    color: #6b7280;
-    margin-bottom: 18px;
-}
+		.portfolio-content p {
+			font-size: 14px;
+			color: #6b7280;
+			margin-bottom: 18px;
+		}
 
-.view-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 22px;
-    background: linear-gradient(135deg, #9ac7e3, #6aaed6);
-    color: #fff;
-    border-radius: 50px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
+		.view-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 10px 22px;
+			background: linear-gradient(135deg, #9ac7e3, #6aaed6);
+			color: #fff;
+			border-radius: 50px;
+			font-size: 14px;
+			text-decoration: none;
+			transition: background 0.3s ease, transform 0.2s ease;
+		}
 
-.view-btn:hover {
-    background: linear-gradient(135deg, #6aaed6, #4f93c2);
-    transform: scale(1.05);
-    color: #fff;
-}
+		.view-btn:hover {
+			background: linear-gradient(135deg, #6aaed6, #4f93c2);
+			transform: scale(1.05);
+			color: #fff;
+		}
 
+		/* Filter UI */
+		.portfolio-filter {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		.filter-btn {
+			border: 1px solid rgba(0, 0, 0, .12);
+			background: #f5f6f8;
+			padding: 10px 18px;
+			border-radius: 999px;
+			font-weight: 600;
+			font-size: 14px;
+			cursor: pointer;
+			transition: all .2s ease;
+			outline: none !important;
+		}
+
+		.filter-btn:hover {
+			transform: translateY(-1px);
+		}
+
+		.filter-btn.active {
+			background: #2f3e4e;
+			/* match your sidebar vibe */
+			color: #fff;
+			border-color: #2f3e4e;
+		}
+
+		/* Animation for cards */
+		.portfolio.hide-card {
+			display: none !important;
+		}
 	</style>
 
 
@@ -466,35 +502,7 @@
 					</div>
 				</div>
 
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-					<div class="resume-content">
-						<h3 class="mb-0">Web Developer Intern</h3>
-						<div class="subheading mb-3">Magellan Solutions - Mandaluyong (Internship)</div>
-						<ul class="text-justify">
-							<li>
-								Creating Web Application by the use of Laravel Framework.
-							</li>
-							<li>
-								Write, design or edit web page content.
-							</li>
-							<li>
-								Analyze user need to determine technical requirements.
-							</li>
-							<li>
-								Identify the requirement needed by the users.
-							</li>
-							<li>
-								Create a Room Reservation System for the Agents.
-							</li>
-							<li>
-								Fixing some technical problem inside the company
-							</li>
-						</ul>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">April 26, 2019 - June 2019</span>
-					</div>
-				</div>
+
 
 				<!--<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
 					<div class="resume-content">
@@ -820,7 +828,7 @@
 						<i class="fab fa-vuejs"></i>
 					</li>
 
-					
+
 
 				</ul>
 
@@ -1156,448 +1164,502 @@
 			<div class="w-100">
 				<h2 class="mb-5">My Sample Work</h2>
 				<div class="container">
+					<!-- Filter Bar -->
+					<div class="portfolio-filter text-center mb-4">
+						<button class="filter-btn active" data-filter="all">All</button>
+						<!-- <button class="filter-btn" data-filter="mobile">Mobile</button> -->
+						<button class="filter-btn" data-filter="agentic">AI-Powered Systems</button>
+						<button class="filter-btn" data-filter="website">Website</button>
+					</div>
+
 					<!-- latest proj-->
 
 					<div class="row">
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="better-animals.png" class="img-fluid portfolio-image" alt="Better Animals PH">
 
 								<div class="portfolio-content">
 									<h4>BetterAnimals.ph</h4>
 									<p>
-									A community-driven animal welfare portal for the Philippines, providing access to rescue services, adoption resources, veterinary care, government agencies, and animal protection laws—designed to support advocacy, transparency, and public action for animal well-being.
+										A community-driven animal welfare portal for the Philippines, providing access
+										to rescue services, adoption resources, veterinary care, government agencies,
+										and animal protection laws—designed to support advocacy, transparency, and
+										public action for animal well-being.
 									</p>
 
 									<a href="javascript:void(0);" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="psychology.png" class="img-fluid portfolio-image" alt="Psychology Dictionary">
 
 								<div class="portfolio-content">
 									<h4>Emirati–Russian Psychology Dictionary</h4>
 									<p>
-									Developed a comprehensive bilingual psychology dictionary platform under the Zayed Higher Organization for People of Determination, providing a complete and structured reference of psychological terms for accessible cross-language understanding.
+										Developed a comprehensive bilingual psychology dictionary platform under the
+										Zayed Higher Organization for People of Determination, providing a complete and
+										structured reference of psychological terms for accessible cross-language
+										understanding.
 									</p>
 
 									<a href="https://psychologydictionary.ae/en/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="agentic">
 							<div class="portfolio-card">
-								<img src="moajam.png" class="img-fluid portfolio-image" alt="Moajam – Historical Arabic Dictionary">
+								<img src="moajam.png" class="img-fluid portfolio-image"
+									alt="Moajam – Historical Arabic Dictionary">
 
 								<div class="portfolio-content">
 									<h4>Moajam – Historical Arabic Dictionary</h4>
 									<p>
-									Built a linguistic research platform using Laravel and Vue.js that allows users to search Arabic word meanings, explore historical usage across different eras, and analyze contextual word applications.
+										Built a linguistic research platform using Laravel, Vue.js, N8N, Gemini that
+										allows users
+										to understand context, search Arabic word meanings, explore historical usage across different eras,
+										and analyze contextual word applications.
 									</p>
 
 									<a href="https://almojamgpt.com/browser/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
+									</a>
+
+									<a href="javascript:void(0)" class="view-btn watch-btn" data-toggle="modal"
+										data-target="#videoModal2">
+										<i class="fas fa-play"></i> Watch
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="agentic">
+							<div class="portfolio-card">
+								<img src="ralph.png" class="img-fluid portfolio-image"
+									alt="Ralph – Agentic AI Assistant">
+
+								<div class="portfolio-content">
+									<h4>RalphAI – Agentic AI Assistant</h4>
+									<p>
+										Built an intelligent AI assistant using Laravel, Vue.js, N8N, and advanced
+										language models that enables users to interact through natural conversation,
+										automate inquiries, and trigger real-time booking functions. The system
+										understands user intent, processes requests dynamically, and executes automated
+										workflows for scheduling, reservations, and customer support—providing a
+										seamless, AI-driven booking and assistance experience.
+									</p>
+
+									<a href="javascript:void(0)" class="view-btn watch-btn" data-toggle="modal"
+										data-target="#videoModal">
+										<i class="fas fa-play"></i> Watch
+									</a>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 portfolio" data-category="agentic">
+							<div class="portfolio-card">
+								<img src="243475b0-e1f5-480c-be30-5637dcc8581e.png" class="img-fluid portfolio-image"
+									alt="Ralph – Agentic AI Assistant">
+
+								<div class="portfolio-content">
+									<h4>AI Debate System (Multi-Agent Intelligence Platform)</h4>
+									<p>
+										Developed an interactive AI debate system using Laravel, Vue.js, and advanced language models that enables real-time structured discussions between opposing AI perspectives. The platform analyzes user topics, generates intelligent pro and con arguments, and visualizes reasoning dynamically—demonstrating multi-agent AI collaboration, contextual understanding, and automated response generation for engaging and insightful debates.
+									</p>
+
+									<a href="javascript:void(0)" class="view-btn watch-btn" data-toggle="modal"
+										data-target="#videoModal3">
+										<i class="fas fa-play"></i> Watch
+									</a>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="truckhub-dashboard.png" class="img-fluid portfolio-image" alt="Truckhub AE">
 
 								<div class="portfolio-content">
 									<h4>Truckhub.ae</h4>
 									<p>
-									Developed a multi-vendor booking platform that connects customers with heavy equipment and logistics providers. The system centralizes multiple businesses offering services such as cranes and heavy trucks, allowing users to easily find and book services while providers manage requests, schedules, and operations from a single dashboard.
+										Developed a multi-vendor booking platform that connects customers with heavy
+										equipment and logistics providers. The system centralizes multiple businesses
+										offering services such as cranes and heavy trucks, allowing users to easily find
+										and book services while providers manage requests, schedules, and operations
+										from a single dashboard.
 
 									</p>
 
-									<a href="https://truckhub.ae/admin/ui-v2/public/admin/request/pending" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+									<a href="https://truckhub.ae/admin/ui-v2/public/admin/request/pending"
+										target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="sheikhzayed.png" class="img-fluid portfolio-image" alt="Sheikh Zayed International Award">
+								<img src="sheikhzayed.png" class="img-fluid portfolio-image"
+									alt="Sheikh Zayed International Award">
 
 								<div class="portfolio-content">
 									<h4>Sheikh Zayed Awards</h4>
-									<p>Developed website for the 3rd Sheikh Zayed Awards to showcase event details, nominees, news, etc.</p>
+									<p>Developed website for the 3rd Sheikh Zayed Awards to showcase event details,
+										nominees, news, etc.</p>
 
-									<a href="https://www.sheikhzayedinternationalawards.com" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+									<a href="https://www.sheikhzayedinternationalawards.com" target="_blank"
+										class="view-btn">
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						
 
-						<div class="col-md-4 portfolio">
+
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="sical.png" class="img-fluid portfolio-image" alt="SICAL Project">
 
 								<div class="portfolio-content">
 									<h4>The Sharjah International Conference on AI & Linguistics</h4>
-									<p>Conference website design & development focused on AI and linguistics research.</p>
+									<p>Conference website design & development focused on AI and linguistics research.
+									</p>
 
 									<a href="https://ai-linguisticsconference.com/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						
-						<div class="col-md-4 portfolio">
+
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="tolerance-conference.png" class="img-fluid portfolio-image" alt="International Dialogue of Civilization & Tolerance">
+								<img src="tolerance-conference.png" class="img-fluid portfolio-image"
+									alt="International Dialogue of Civilization & Tolerance">
 
 								<div class="portfolio-content">
 									<h4>International Dialogue of Civilization & Tolerance</h4>
-									<p>Created a website for an international conference fostering dialogue on civilization and tolerance.</p>
+									<p>Created a website for an international conference fostering dialogue on
+										civilization and tolerance.</p>
 
 									<a href="https://idctconference.org" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
 
-					
 
-				
-						<div class="col-md-4 portfolio">
+
+
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="citescholar.png" class="img-fluid portfolio-image" alt="Cite Scholar Platform">
+								<img src="citescholar.png" class="img-fluid portfolio-image"
+									alt="Cite Scholar Platform">
 
 								<div class="portfolio-content">
 									<h4>Cite Scholar Platform</h4>
-									<p>Built a article publication management platform using laravel for researchers and scholars to manage and share academic citations.</p>
+									<p>Built a article publication management platform using laravel for researchers and
+										scholars to manage and share academic citations.</p>
 
-									<a href="https://citescholar.com/portal/public/login?event=eyJpdiI6IlJsSFpsRDRZT1RrUTlnY1NuVVhHNlE9PSIsInZhbHVlIjoibXpuZjVLVE90MTA5M0FxTlVBUlVIUT09IiwibWFjIjoiODY2YWFmMDRjN2FhOWQyNDU0MDYxODdmMzQ5YTA2MmNjMTU0NDIwMGVjNDBmYzEyYmE3ZGU5NDgyN2E4N2E4YSIsInRhZyI6IiJ9" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+									<a href="https://citescholar.com/portal/public/login?event=eyJpdiI6IlJsSFpsRDRZT1RrUTlnY1NuVVhHNlE9PSIsInZhbHVlIjoibXpuZjVLVE90MTA5M0FxTlVBUlVIUT09IiwibWFjIjoiODY2YWFmMDRjN2FhOWQyNDU0MDYxODdmMzQ5YTA2MmNjMTU0NDIwMGVjNDBmYzEyYmE3ZGU5NDgyN2E4N2E4YSIsInRhZyI6IiJ9"
+										target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="euro-arabmed.png" class="img-fluid portfolio-image" alt="Euro Arab Medical Congress">
+								<img src="euro-arabmed.png" class="img-fluid portfolio-image"
+									alt="Euro Arab Medical Congress">
 
 								<div class="portfolio-content">
 									<h4>Euro Arab Medical Congress Wordpress Website</h4>
-									<p>Designed and developed website for the Euro Arab Medical Congress providing event information and online registration.</p>
+									<p>Designed and developed website for the Euro Arab Medical Congress providing event
+										information and online registration.</p>
 
 									<a href="https://euroarabmed.com/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="bellaroma-landing.png" class="img-fluid portfolio-image" alt="Bellaroma Specialty Hospital">
+								<img src="bellaroma-landing.png" class="img-fluid portfolio-image"
+									alt="Bellaroma Specialty Hospital">
 
 								<div class="portfolio-content">
 									<h4>Bellaroma Specialty Hospital Lead Form</h4>
 									<p>
-									Designed and developed a lead generation form for Bellaroma Specialty Hospital, focused on patient inquiries, appointment requests, and streamlined contact management.
+										Designed and developed a lead generation form for Bellaroma Specialty Hospital,
+										focused on patient inquiries, appointment requests, and streamlined contact
+										management.
 									</p>
 
-									<a href="https://bellaroma.ae/booking/index-en.php" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+									<a href="https://bellaroma.ae/booking/index-en.php" target="_blank"
+										class="view-btn">
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="bellaroma.png" class="img-fluid portfolio-image" alt="Bellaroma Specialty Hospital">
+								<img src="bellaroma.png" class="img-fluid portfolio-image"
+									alt="Bellaroma Specialty Hospital">
 
 								<div class="portfolio-content">
 									<h4>Bellaroma Specialty Hospital</h4>
 									<p>
-									Designed and developed the official branding website for Bellaroma Specialty Hospital, highlighting medical services, specialties, and patient-focused care.
+										Designed and developed the official branding website for Bellaroma Specialty
+										Hospital, highlighting medical services, specialties, and patient-focused care.
 									</p>
 
 									<a href="https://bellaroma.ae" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						
-						
-						
-					
-						<div class="col-md-4 portfolio">
+
+
+
+
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="pinoyluckydraws.png" class="img-fluid portfolio-image" alt="Pinoy Lucky Draws">
+								<img src="pinoyluckydraws.png" class="img-fluid portfolio-image"
+									alt="Pinoy Lucky Draws">
 
 								<div class="portfolio-content">
 									<h4>Pinoy Lucky Draws</h4>
 									<p>
-									Designed and developed the official Pinoy Lucky Draws website using Laravel, featuring raffle listings, prize showcases, and user-friendly participation flows.
+										Designed and developed the official Pinoy Lucky Draws website using Laravel,
+										featuring raffle listings, prize showcases, and user-friendly participation
+										flows.
 									</p>
 
 									<a href="https://pinoyluckydraws.com" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="emiratesscholar.png" class="img-fluid portfolio-image" alt="Emirates Scholar Center For Research and Studies">
+								<img src="emiratesscholar.png" class="img-fluid portfolio-image"
+									alt="Emirates Scholar Center For Research and Studies">
 
 								<div class="portfolio-content">
 									<h4>Emirates Scholar Center For Research and Studies</h4>
 									<p>
-									Designed and developed the official website for Emirates Scholar Center for Research and Studies to communicate its academic mission, research focus, and institutional activities.
+										Designed and developed the official website for Emirates Scholar Center for
+										Research and Studies to communicate its academic mission, research focus, and
+										institutional activities.
 									</p>
 
 									<a href="https://emiratesscholar.com/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="geminosgroup.png" class="img-fluid portfolio-image" alt="Geminos Group">
 
 								<div class="portfolio-content">
 									<h4>Geminos Group</h4>
 									<p>
-									Designed and developed the official corporate website for Geminos Group, showcasing its digital services, system development solutions, and technology expertise.
+										Designed and developed the official corporate website for Geminos Group,
+										showcasing its digital services, system development solutions, and technology
+										expertise.
 									</p>
 
 									<a href="https://geminos.ae/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="chicservices.png" class="img-fluid portfolio-image" alt="Chic Services">
 
 								<div class="portfolio-content">
 									<h4>Chic Services</h4>
 									<p>
-									Designed and developed the official website for Chic Services, showcasing its professional cleaning services, service packages, and commitment to quality.
+										Designed and developed the official website for Chic Services, showcasing its
+										professional cleaning services, service packages, and commitment to quality.
 									</p>
 
 									<a href="https://chicservices.ae" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="lawfinder.png" class="img-fluid portfolio-image" alt="Law Finder App">
 
 								<div class="portfolio-content">
 									<h4>Law Finder App</h4>
 									<p>
-									Designed and developed Law Finder, a legal discovery platform that connects users with verified lawyers across the Gulf countries.
+										Designed and developed Law Finder, a legal discovery platform that connects
+										users with verified lawyers across the Gulf countries.
 									</p>
 
 									<a href="https://lawfinderapp.com/" target="_blank" class="view-btn">
-										<i class="fas fa-eye"></i> View Project
+										<i class="fas fa-eye"></i> View
 									</a>
 								</div>
 							</div>
 						</div>
 
 						<!--ai start here-->
-						<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="banner-1.png" class="img-fluid portfolio-image" alt="Advance Information Security Course">
+								<img src="banner-1.png" class="img-fluid portfolio-image"
+									alt="Advance Information Security Course">
 
 								<div class="portfolio-content">
-								<h4>Advance Information Security Course</h4>
-								<p>
-									Designed and developed an interactive security awareness course covering advanced information security concepts and best practices.
-								</p>
+									<h4>Advance Information Security Course</h4>
+									<p>
+										Designed and developed an interactive security awareness course covering
+										advanced information security concepts and best practices.
+									</p>
 
-								<a href="https://effulgent-twilight-376052.netlify.app/content/index.html" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
+									<a href="https://effulgent-twilight-376052.netlify.app/content/index.html"
+										target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
 								</div>
 							</div>
-							</div>
-							<div class="col-md-4 portfolio">
+						</div>
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="banner-2.png" class="img-fluid portfolio-image" alt="Avatar Malware and Ransomware">
+								<img src="banner-2.png" class="img-fluid portfolio-image"
+									alt="Avatar Malware and Ransomware">
 
 								<div class="portfolio-content">
-								<h4>Avatar Malware and Ransomware</h4>
-								<p>
-									Developed a cybersecurity awareness module focused on malware and ransomware threats with interactive learning content.
-								</p>
+									<h4>Avatar Malware and Ransomware</h4>
+									<p>
+										Developed a cybersecurity awareness module focused on malware and ransomware
+										threats with interactive learning content.
+									</p>
 
-								<a href="https://loquacious-melomakarona-187f23.netlify.app/english/content/index.html" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
+									<a href="https://loquacious-melomakarona-187f23.netlify.app/english/content/index.html"
+										target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
 								</div>
 							</div>
-							</div>
-							<div class="col-md-4 portfolio">
+						</div>
+
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="banner-3.png" class="img-fluid portfolio-image" alt="5 Minute Phishing Course EN">
+								<img src="banner-4.png" class="img-fluid portfolio-image"
+									alt="5 Minute Phishing Course AR">
 
 								<div class="portfolio-content">
-								<h4>5-Minute Phishing Course (EN)</h4>
-								<p>
-									Created a short-form phishing awareness course designed for quick learning and improved cyber threat recognition.
-								</p>
+									<h4>5-Minute Phishing Course (AR)</h4>
+									<p>
+										Developed an Arabic phishing awareness course focused on fast, accessible
+										cybersecurity education.
+									</p>
 
-								<a href="https://sage-pavlova-48510e.netlify.app/english/content/index.html" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
+									<a href="https://sage-pavlova-48510e.netlify.app/arabic/content/index.html"
+										target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
 								</div>
 							</div>
-							</div>
-							<div class="col-md-4 portfolio">
-							<div class="portfolio-card">
-								<img src="banner-4.png" class="img-fluid portfolio-image" alt="5 Minute Phishing Course AR">
+						</div>
 
-								<div class="portfolio-content">
-								<h4>5-Minute Phishing Course (AR)</h4>
-								<p>
-									Developed an Arabic phishing awareness course focused on fast, accessible cybersecurity education.
-								</p>
-
-								<a href="https://sage-pavlova-48510e.netlify.app/arabic/content/index.html" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-4 portfolio">
-							<div class="portfolio-card">
-								<img src="banner-5.png" class="img-fluid portfolio-image" alt="Classic Design Social Networking">
-
-								<div class="portfolio-content">
-								<h4>Classic Design Social Networking</h4>
-								<p>
-									Designed a classic-style social networking interface focused on usability and structured content presentation.
-								</p>
-
-								<a href="https://zingy-toffee-a27089.netlify.app/english/content/index.html" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="banner-6.png" class="img-fluid portfolio-image" alt="Classic Design Phishing">
 
 								<div class="portfolio-content">
-								<h4>Classic Design Phishing</h4>
-								<p>
-									Created a classic-layout phishing awareness design aimed at improving user recognition of cyber threats.
-								</p>
+									<h4>Classic Design Phishing</h4>
+									<p>
+										Created a classic-layout phishing awareness design aimed at improving user
+										recognition of cyber threats.
+									</p>
 
-								<a href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
+									<a href="https://elegant-chebakia-0e554a.netlify.app/english/content/index.html"
+										target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
 								</div>
 							</div>
-							</div>
-							<div class="col-md-4 portfolio">
+						</div>
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
-								<img src="reservation_resort.png" class="img-fluid portfolio-image" alt="Room and Resort Management System">
+								<img src="reservation_resort.png" class="img-fluid portfolio-image"
+									alt="Room and Resort Management System">
 
 								<div class="portfolio-content">
-								<h4>Room and Resort Management System</h4>
-								<p>
-									Developed a management system for room reservations and resort operations with streamlined booking workflows.
-								</p>
+									<h4>Room and Resort Management System</h4>
+									<p>
+										Developed a management system for room reservations and resort operations with
+										streamlined booking workflows.
+									</p>
 
-								<a href="#" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
+									<a href="#" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
 								</div>
 							</div>
-							</div>
-							<div class="col-md-4 portfolio">
-							<div class="portfolio-card">
-								<img src="salon.png" class="img-fluid portfolio-image" alt="Salon Appointment System">
+						</div>
 
-								<div class="portfolio-content">
-								<h4>Salon Appointment System</h4>
-								<p>
-									Built an appointment management system for salons, enabling efficient scheduling and customer management.
-								</p>
 
-								<a href="https://github.com/rallion90/SalonManagement" target="_blank" class="view-btn">
-									<i class="fab fa-github"></i> View Code
-								</a>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-4 portfolio">
-							<div class="portfolio-card">
-								<img src="motor.png" class="img-fluid portfolio-image" alt="Motorcycle and Bike Parts E-Commerce">
-
-								<div class="portfolio-content">
-								<h4>Motorcycle & Bike Parts E-Commerce</h4>
-								<p>
-									Developed an e-commerce website for motorcycle and bike parts featuring product listings and order management.
-								</p>
-
-								<a href="https://github.com/rallion90/LimboBros" target="_blank" class="view-btn">
-									<i class="fab fa-github"></i> View Code
-								</a>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-4 portfolio">
+						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="kevin-banner.png" class="img-fluid portfolio-image" alt="Kevin Web Page">
 
 								<div class="portfolio-content">
-								<h4>Kevin Web Page</h4>
-								<p>
-									Designed and developed a personal promotional webpage with a clean layout and focused content presentation.
-								</p>
+									<h4>Kevin Web Page</h4>
+									<p>
+										Designed and developed a personal promotional webpage with a clean layout and
+										focused content presentation.
+									</p>
 
-								<a href="https://security-awareness.page/" target="_blank" class="view-btn">
-									<i class="fas fa-eye"></i> View Project
-								</a>
+									<a href="https://security-awareness.page/" target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
 								</div>
 							</div>
-							</div>
+						</div>
 
 						<!--ai end here-->
-						
-					
+
+
 						<!-- <div class="col-md-4 portfolio">
 
 							<img src="banner-1.png" class="img-fluid rounded image">
@@ -1774,7 +1836,7 @@
 
 
 
-						
+
 
 
 
@@ -1847,6 +1909,69 @@
 		<a href="gallery8-content-1.png"></a>
 		<a href="gallery8-content-2.png"></a>
 		<a href="gallery8-content-3.png"></a>
+	</div>
+
+	<!-- VIDEO MODAL -->
+	<div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content" style="background:#000;border-radius:12px;">
+
+				<div class="modal-body p-0">
+					<button type="button" class="close text-white" data-dismiss="modal"
+						style="position:absolute;right:15px;top:10px;z-index:999;">
+						&times;
+					</button>
+
+					<!-- VIDEO -->
+					<video id="sampleVideo" width="100%" controls>
+						<source src="16fa3faf-1c80-4f18-bf45-f70bc9f5d145 (1).mp4" type="video/mp4">
+					</video>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- VIDEO MODAL -->
+	<div class="modal fade" id="videoModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content" style="background:#000;border-radius:12px;">
+
+				<div class="modal-body p-0">
+					<button type="button" class="close text-white" data-dismiss="modal"
+						style="position:absolute;right:15px;top:10px;z-index:999;">
+						&times;
+					</button>
+
+					<!-- VIDEO -->
+					<video id="sampleVideo" width="100%" controls>
+						<source src="arabic.mp4" type="video/mp4">
+					</video>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- VIDEO MODAL -->
+	<div class="modal fade" id="videoModal3" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content" style="background:#000;border-radius:12px;">
+
+				<div class="modal-body p-0">
+					<button type="button" class="close text-white" data-dismiss="modal"
+						style="position:absolute;right:15px;top:10px;z-index:999;">
+						&times;
+					</button>
+
+					<!-- VIDEO -->
+					<video id="sampleVideo" width="100%" controls>
+						<source src="158625fe-d05b-43fe-ba10-180cdf626c5a.mp4" type="video/mp4">
+					</video>
+
+				</div>
+			</div>
+		</div>
 	</div>
 
 
@@ -1953,6 +2078,39 @@
 	});
 
 	(function () {
+		const buttons = document.querySelectorAll('.filter-btn');
+		const cards = document.querySelectorAll('.portfolio');
+
+		function setActive(btn) {
+			buttons.forEach(b => b.classList.remove('active'));
+			btn.classList.add('active');
+		}
+
+		function filterCards(filter) {
+			cards.forEach(card => {
+				const cat = (card.getAttribute('data-category') || '').toLowerCase();
+				const matches = filter === 'all' || cat.split(' ').includes(filter);
+
+				if (matches) {
+					card.classList.remove('hide-card');
+				} else {
+					card.classList.add('hide-card');
+				}
+			});
+		}
+
+		buttons.forEach(btn => {
+			btn.addEventListener('click', function () {
+				const filter = this.getAttribute('data-filter');
+				setActive(this);
+				filterCards(filter);
+			});
+		});
+
+		// default
+		filterCards('all');
+	})();
+	/**(function () {
 		
 		const visit = {
 			time: new Date().toISOString(),
@@ -1964,7 +2122,7 @@
 			language: navigator.language
 		};
 
-		// recruiter score
+		
 		let score = 0;
 		if (visit.referrer.includes("linkedin.com")) score += 3;
 		if (visit.device === "desktop") score += 2;
@@ -1979,7 +2137,7 @@
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(visit)
 		});
-		})();
+		})();**/
 
 
 
