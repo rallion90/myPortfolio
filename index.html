@@ -147,8 +147,12 @@
 
 		.portfolio-image {
 			width: 100%;
-			height: 220px;
+			height: 240px;
 			object-fit: cover;
+			transition: transform 0.6s ease;
+		}
+		.portfolio-card:hover .portfolio-image {
+			transform: scale(1.15);
 		}
 
 		.portfolio-content {
@@ -1177,6 +1181,26 @@
 					<div class="row">
 						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
+								<img src="arabmetricscore2.png" class="img-fluid portfolio-image" alt="Better Animals PH">
+
+								<div class="portfolio-content">
+									<h4>ARABmetricscore.com</h4>
+									<p>
+										A scholarly publishing database for arab countries that indexes academic papers across multiple
+										research platforms, helping journals and publishers increase visibility,
+										citation tracking, and global discoverability—built to support the academic
+										community through reliable indexing, analytics, and structured research data.
+									</p>
+
+									<a href="https://arabmetricscore.com" target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 portfolio" data-category="website">
+							<div class="portfolio-card">
 								<img src="better-animals.png" class="img-fluid portfolio-image" alt="Better Animals PH">
 
 								<div class="portfolio-content">
@@ -1229,7 +1253,7 @@
 										and analyze contextual word applications.
 									</p>
 
-									<a href="https://almojamgpt.com/browser/" target="_blank" class="view-btn">
+									<a href="https://smart.almojam.ai/" target="_blank" class="view-btn">
 										<i class="fas fa-eye"></i> View
 									</a>
 
