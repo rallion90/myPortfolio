@@ -6,15 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta name="description"
-		content="Howdy! You found me, I'm a web developer with over three years of experience in building powerful backend systems. My journey in tech has been all about learning and finding new solutions that fit my clients' needs.">
+		content="Portfolio of Ralph Rallion Laynes, a Dubai-based full-stack web developer focused on Laravel, CodeIgniter, PHP, Vue.js, Docker, Nginx, automation, prompt engineering, Hugging Face, RAG, deployment, website hardening, APIs, and security-aware business systems for international teams.">
 	<meta name="keywords"
-		content="Ralph Rallion Laynes, Portfolio, REST API, Web Development, Software Engineering, Projects">
+		content="Ralph Rallion Laynes, Dubai web developer, Laravel developer, PHP developer, CodeIgniter, Vue.js, Docker, Nginx, prompt engineering, Hugging Face, RAG, AI automation, deployment, website hardening, REST API, web development, software engineering, cybersecurity">
 	<meta name="author" content="Ralph Rallion Laynes">
 	<link rel="canonical" href="https://rallion90.github.io/myPortfolio/index.html">
 
 	<meta name="robots" content="index, follow">
 
-	<title>Ralph Rallion Laynes - Web Developer</title>
+	<title>Ralph Rallion Laynes - Full-Stack Web Developer</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="bootstrap.min.css" rel="stylesheet">
@@ -227,6 +227,98 @@
 		.portfolio.hide-card {
 			display: none !important;
 		}
+
+		.availability-note {
+			display: inline-block;
+			margin-bottom: 18px;
+			padding: 8px 14px;
+			border-left: 4px solid #bd5d38;
+			background: #f8f9fa;
+			color: #343a40;
+			font-weight: 700;
+		}
+
+		.profile-highlights {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+			gap: 14px;
+			margin: 0 0 34px;
+		}
+
+		.profile-highlight {
+			border: 1px solid rgba(0, 0, 0, .08);
+			border-radius: 8px;
+			padding: 16px;
+			background: #fff;
+		}
+
+		.profile-highlight strong {
+			display: block;
+			color: #343a40;
+			font-size: 22px;
+			line-height: 1.1;
+		}
+
+		.profile-highlight span {
+			display: block;
+			margin-top: 6px;
+			color: #6b7280;
+			font-size: 14px;
+		}
+
+		.profile-actions {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+			margin-bottom: 26px;
+		}
+
+		.profile-actions .btn {
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: .02rem;
+		}
+
+		.skill-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 16px;
+			margin-top: 24px;
+			margin-bottom: 34px;
+		}
+
+		.skill-group {
+			border: 1px solid rgba(0, 0, 0, .08);
+			border-radius: 8px;
+			padding: 18px;
+			background: #fff;
+		}
+
+		.skill-group h4 {
+			margin-bottom: 14px;
+			font-size: 22px;
+			color: #343a40;
+		}
+
+		.skill-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.skill-tags li {
+			border: 1px solid rgba(47, 62, 78, .14);
+			border-radius: 999px;
+			padding: 7px 11px;
+			background: #f5f6f8;
+			color: #343a40;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 1.2;
+		}
 	</style>
 
 
@@ -275,7 +367,7 @@
 					<a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#projects">My Sample Projects</a>
+					<a class="nav-link js-scroll-trigger" href="#projects">Selected Projects</a>
 				</li>
 				<!-- <li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
@@ -300,26 +392,50 @@
 				</h1>
 				<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4199963"
 					style='border:none;width:100%;height:100px;'></iframe>
-				<div class="subheading mb-5">Laravel Developer · CodeIgniter Developer · Intermediate PHP Programmer · 4
-					years experience <br>
+				<div class="subheading mb-4">Full-Stack Web Developer &middot; Laravel / CodeIgniter / PHP &middot; Vue.js
+					&middot; Docker / Nginx &middot; AI Automation / RAG &middot; APIs &middot; 6+ years experience <br>
 					<a href="mailto:ralphlaynes@gmail.com">ralphlaynes@gmail.com</a>
-					<p>Springs 4, Street 8 Villa 16, Dubai, UAE <br>
-						(+971) 55 162 0531 <br />
-						My Whats App Contact #: (+971) 55 162 0531
+					<p>Dubai, United Arab Emirates <br>
+						<a href="tel:+971551620531">(+971) 55 162 0531</a> &middot; WhatsApp: (+971) 55 162 0531
 					</p>
 
 
 				</div>
 
-				<p class="lead mb-5 text-justify">
-					I'm a web developer with over four years of experience in building powerful backend systems.
-					Recently, I've taken up cybersecurity as a hobby and even passed the Security+ exam. My journey in
-					tech has been all about learning and finding new solutions that fit my clients' needs. I'm excited
-					to combine my web development skills with my newfound interest in cybersecurity to create secure and
-					innovative solutions for today's challenges.
-					<a href="#" data-toggle="modal" data-target="#read-more">Do you want to know my skills more? Click
-						it here</a>
+				<div class="availability-note">
+					Dubai-based full-stack developer with international project experience and remote-ready collaboration.
+				</div>
+
+				<p class="lead mb-4 text-justify">
+					I build practical, production-ready web systems for businesses, events, research platforms, and service
+					operations. My strongest work is in Laravel, CodeIgniter, Core PHP, MySQL, Vue.js, Docker, Nginx,
+					REST APIs, workflow automation, prompt engineering, Hugging Face, RAG, deployment, optimization,
+					and secure backend architecture. I bring hands-on Dubai project experience, international
+					client exposure, and CompTIA Security+ / Network+ knowledge, which helps me develop systems that are
+					not only functional, but reliable, maintainable, and security-aware.
+					<a href="#" data-toggle="modal" data-target="#read-more">Read more about my technical strengths</a>.
 				</p>
+
+				<div class="profile-highlights">
+					<div class="profile-highlight">
+						<strong>6+ Years</strong>
+						<span>Commercial web development experience across UAE and international projects.</span>
+					</div>
+					<div class="profile-highlight">
+						<strong>20+ Projects</strong>
+						<span>Websites, portals, event systems, AI assistants, RAG workflows, booking platforms, and dashboards.</span>
+					</div>
+					<div class="profile-highlight">
+						<strong>Security-Aware</strong>
+						<span>CompTIA Security+ and Network+ certified, with phishing awareness and incident response exposure.</span>
+					</div>
+				</div>
+
+				<div class="profile-actions">
+					<a class="btn btn-primary" target="_blank" href="RalphRallion_Laynes_Resume.pdf">Download CV</a>
+					<a class="btn btn-outline-primary js-scroll-trigger" href="#projects">View Projects</a>
+					<a class="btn btn-outline-dark" href="mailto:ralphlaynes@gmail.com">Email Me</a>
+				</div>
 
 				<div class="modal fade" id="read-more" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 					aria-hidden="true">
@@ -334,43 +450,25 @@
 							<div class="modal-body">
 								<!-- Place your long text content here -->
 								<p>
-									I thrive in the realm of backend development, where the magic happens behind the
-									scenes.
-									It's here that I find my passion and purpose, solving intricate challenges with
-									elegant solutions. Armed with a profound understanding of Object-Oriented
-									Programming
-									(OOP) concepts, I am well-versed in the art of crafting clean, secure, maintainable,
-									and
-									reusable code. My approach isn't just about solving immediate problems; it's about
-									ensuring a seamless development experience for the entire team, from start to
-									finish.<br /><br />
+									I focus on backend-heavy full-stack development: turning business requirements into
+									working systems with clean data flow, reliable user journeys, and maintainable code.
+									My day-to-day stack includes PHP, Laravel, CodeIgniter, MySQL, Vue.js, JavaScript,
+									WordPress, REST APIs, prompt engineering, Hugging Face, RAG concepts, and workflow
+									automation tools such as N8N and Zapier.<br /><br />
 
-									I also Proficient in WordPress, I specialize in creating, customizing, and
-									optimizing
-									websites. With the ability to modify themes, update content, and troubleshoot
-									issues, I ensure that websites not only look great but also function flawlessly.
-									My skills are dedicated to enhancing the digital presence of businesses and
-									individuals, resulting in well-crafted, reliable WordPress websites.<br /><br />
+									I have delivered public websites, research platforms, event registration systems,
+									booking flows, dashboards, AI-assisted tools, RAG-style knowledge workflows, and multilingual content updates for
+									clients in the UAE and abroad. I am comfortable working with stakeholders, gathering
+									requirements, troubleshooting production issues, documenting APIs, and supporting
+									systems before and during live events.<br /><br />
 
-									I'm passionate about transforming complex requirements into efficient, backend
-									solutions, and I'm excited to continue this journey of innovation and
-									problem-solving. If you're seeking a developer who's not just proficient
-									but truly passionate about delivering top-tier web applications,
-									I'm here to be a valuable asset to your team.<br /><br />
+									My cybersecurity foundation gives me an additional advantage for modern web teams.
+									With CompTIA Security+ and Network+ certification, plus phishing awareness and
+									incident response exposure, I build with security, access control, risk, and data
+									handling in mind from the start.<br /><br />
 
-									I possess a strong foundation in cybersecurity skills, having successfully
-									completed the Security+ certification. My expertise includes understanding
-									fundamental security concepts, implementing best practices for network security,
-									conducting risk assessments, and implementing various cryptographic techniques.
-									Additionally, I am proficient in identifying and mitigating security threats,
-									analyzing security incidents, and implementing proper incident response procedures.
-									With a solid understanding of security principles and practical skills in
-									safeguarding
-									systems and networks, I am well-equipped to contribute to ensuring the
-									confidentiality,
-									integrity, and availability of sensitive information in any organization to protect
-									it from
-									changing today's technology.<br /><br />
+									I am currently based in Dubai and experienced in collaborating with international
+									teams, clients, and fast-moving project requirements.<br /><br />
 
 									Feel free to contact me: <a href="tel:+971551620531">(+971) 55 162 0531</a> or Email
 									me at: <a href="mailto:ralphlaynes@gmail.com">ralphlaynes@gmail.com</a>
@@ -408,32 +506,69 @@
 
 				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
 					<div class="resume-content">
+						<h3 class="mb-0">Web Developer / Web Operations</h3>
+						<div class="subheading mb-3">Bab Alomda Company</div>
+						<ul class="text-justify">
+							<li>
+								Maintain, optimize, and deploy websites for the iGaming industry with a focus on
+								reliability, security, performance, and production uptime.
+							</li>
+							<li>
+								Create and update web platforms, landing pages, backend modules, and operational tools
+								to support fast-moving business and marketing requirements.
+							</li>
+							<li>
+								Run Docker-based environments and support virtualization workflows for development,
+								testing, deployment, and server operations.
+							</li>
+							<li>
+								Configure and maintain Nginx web server setups, deployment processes, domain routing,
+								SSL/TLS configuration, and performance optimization.
+							</li>
+							<li>
+								Apply website hardening practices including access control, server configuration
+								review, vulnerability reduction, secure deployment habits, and ongoing monitoring.
+							</li>
+						</ul>
+					</div>
+					<div class="resume-date text-md-right">
+						<span class="text-primary">March 16, 2026 - Present</span>
+					</div>
+				</div>
+
+				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+					<div class="resume-content">
 						<h3 class="mb-0">Web Developer</h3>
 						<div class="subheading mb-3">Geminos Group - Business Bay, Dubai, United Arab Emirates</div>
 						<ul class="text-justify">
 							<li>
-								Creating Website for the clients need.
+								Develop, maintain, and enhance client websites, portals, booking systems, dashboards,
+								and event platforms using PHP, Laravel, CodeIgniter, WordPress, JavaScript, and Vue.js.
 							</li>
 
 							<li>
-								Analyze client need to determine technical requirements.
+								Translate client requirements into technical specifications, database structures,
+								user flows, and functional system architecture.
 							</li>
 							<li>
-								Identify the requirement needed by the clients.
+								Build custom features including registration workflows, content management tools,
+								multilingual pages, lead forms, and admin dashboards.
 							</li>
 							<li>
-								Create a functional system design architecture based on given requirements.
+								Integrate APIs, automation workflows, and third-party services to reduce manual work
+								and improve operational efficiency.
 							</li>
 
 							<li>
-								Translating Website content to specific languages.
+								Provide production support, bug fixing, deployment assistance, and live-event technical
+								support for business-critical platforms.
 							</li>
 
 
 						</ul>
 					</div>
 					<div class="resume-date text-md-right">
-						<span class="text-primary">September 27, 2022 - Present</span>
+						<span class="text-primary">September 27, 2022 - March 15, 2026</span>
 					</div>
 				</div>
 
@@ -443,34 +578,28 @@
 						<div class="subheading mb-3">Lucy Security/ThriveDX - Tayabas</div>
 						<ul class="text-justify">
 							<li>
-								Creating E-Learning Website that educate users about phishing by the use of HTML,
-								Javascript, CSS, ReactJS.
+								Developed e-learning websites and interactive security awareness content using HTML,
+								CSS, JavaScript, and ReactJS.
 							</li>
 							<li>
-								Write, design or edit web page content for the clients need.
+								Built phishing simulation pages and training flows using PHP, HTML, CSS, and JavaScript
+								to support cybersecurity awareness programs.
 							</li>
 							<li>
-								Analyze client need to determine technical requirements.
+								Updated, designed, and maintained client-facing web content based on campaign and
+								training requirements.
 							</li>
 							<li>
-								Identify the requirement needed by the clients.
+								Analyzed client needs, documented technical requirements, and coordinated content
+								localization for multilingual audiences.
 							</li>
 							<li>
-								Create a phishing simulator by the use of PHP as the backend and HTML and CSS as the
-								Frontend.
+								Created Rise Articulate lessons and user education materials focused on phishing,
+								malware behavior, and prevention best practices.
 							</li>
 							<li>
-								Creating a wordpress website for the company.
-							</li>
-							<li>
-								Translating Website content to specific languages.
-							</li>
-							<li>
-								Educate users about how does phishing and other malicious activity work and how to
-								prevent it from happening.
-							</li>
-							<li>
-								Creating Rise Articulate Lesson about Phishing.
+								Supported WordPress website updates, troubleshooting, and content improvements for
+								company and client properties.
 							</li>
 						</ul>
 					</div>
@@ -485,19 +614,21 @@
 						<div class="subheading mb-3">GLEENT INC - Cabuyao, Laguna, Philippines</div>
 						<ul class="text-justify">
 							<li>
-								Creating Project Site Management System using Laravel Framework,
+								Developed a project site management system using the Laravel framework.
 							</li>
 							<li>
-								Fixing Bugs and Issues in Codeigniter framework.
+								Maintained and fixed bugs in CodeIgniter applications, improving stability and user
+								reliability.
 							</li>
 							<li>
-								Assisting Client's Concern.
+								Supported client concerns by troubleshooting issues, clarifying requirements, and
+								delivering practical fixes.
 							</li>
 							<li>
-								Creating Payroll Management System for Construction Site using CodeIgniter.
+								Built a payroll management system for construction site operations using CodeIgniter.
 							</li>
 							<li>
-								Creating a wordpress website for the company.
+								Created and maintained WordPress website pages for company communications.
 							</li>
 						</ul>
 					</div>
@@ -740,36 +871,11 @@
 
 				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
 					<div class="resume-content">
-						<h3 class="mb-0">Pagbilao Central Elementary School</h3>
-						<div class="subheading mb-3">Pagbilao, Quezon</div>
-						<div>Bermudez Cor Bonifacio St, Pagbilao</div>
-						<div>2004 - 2011</div>
-
-						<!-- <p>GPA: 3.23</p> -->
-					</div>
-
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Casa Del Nino Jesus De Pagbilao</h3>
-						<div class="subheading mb-3">Pagbilao, Quezon</div>
-						<div>CM Recto Street, Brgy. Sta. Catalina, Pagbilao, Quezon, Philippines 4302</div>
-						<div>2011 - 2014</div>
-
-						<!-- <p>GPA: 3.23</p> -->
-					</div>
-
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
 						<h3 class="mb-0">Enverga University Foundation</h3>
-						<div class="subheading mb-3">Bachelor of Science in Information Technology Major in Business
-							Analytics</div>
-						<div>Integration of PHP and JQuery in Web Development</div>
-						<div>3D Game Creation using Unity</div>
-						<div>Desktop Applications in Java, C# and .NET Framework</div>
+						<div class="subheading mb-3">Information Technology Coursework - Business Analytics Focus</div>
+						<div>Completed coursework and hands-on projects in PHP and jQuery web development, business
+							analytics, desktop applications with Java, C#, and .NET Framework, and Unity-based 3D game
+							creation.</div>
 
 						<!-- <p>GPA: 3.23</p> -->
 					</div>
@@ -836,191 +942,88 @@
 
 				</ul>
 
-				<div class="row">
-					<div class="col-md-6">
-						<div class="prog">
-							<label for="">Core PHP</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:95%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Laravel</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:95%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">VueJS</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:95%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Codeigniter</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:75%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">JavaScript</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:60%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">EJS</label>
-							<div class="progress">
-								<div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">React</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:45%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Git</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:50%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Incident Response</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:30%" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Security Awareness Training</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:60%" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Flutter</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:30%" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-
-
-
+				<div class="skill-grid">
+					<div class="skill-group">
+						<h4>Backend & Frameworks</h4>
+						<ul class="skill-tags">
+							<li>Core PHP</li>
+							<li>Laravel</li>
+							<li>CodeIgniter</li>
+							<li>Livewire</li>
+							<li>REST APIs</li>
+							<li>API Documentation</li>
+							<li>MySQL</li>
+							<li>MongoDB</li>
+						</ul>
 					</div>
 
-					<div class="col-md-6">
-						<div class="prog">
-							<label for="">MongoDB</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:60%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
+					<div class="skill-group">
+						<h4>Frontend & CMS</h4>
+						<ul class="skill-tags">
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>JavaScript</li>
+							<li>Vue.js</li>
+							<li>React</li>
+							<li>Bootstrap</li>
+							<li>WordPress</li>
+							<li>Responsive UI</li>
+						</ul>
+					</div>
 
-						<div class="prog">
-							<label for="">NodeJS</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:70%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
+					<div class="skill-group">
+						<h4>DevOps & Web Operations</h4>
+						<ul class="skill-tags">
+							<li>Docker</li>
+							<li>Virtualization</li>
+							<li>Nginx</li>
+							<li>Deployment</li>
+							<li>SSL/TLS</li>
+							<li>Website Hardening</li>
+							<li>Performance Optimization</li>
+							<li>Production Support</li>
+						</ul>
+					</div>
 
-						<div class="prog">
-							<label for="">Express JS</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:70%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
+					<div class="skill-group">
+						<h4>AI & Automation</h4>
+						<ul class="skill-tags">
+							<li>Prompt Engineering</li>
+							<li>Hugging Face</li>
+							<li>RAG</li>
+							<li>N8N</li>
+							<li>Zapier</li>
+							<li>AI Assistants</li>
+							<li>Workflow Automation</li>
+							<li>Structured Data Flows</li>
+						</ul>
+					</div>
 
-						<div class="prog">
-							<label for="">Mysql</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:90%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
+					<div class="skill-group">
+						<h4>Security & Networking</h4>
+						<ul class="skill-tags">
+							<li>CompTIA Security+</li>
+							<li>CompTIA Network+</li>
+							<li>Risk Management</li>
+							<li>Identity & Access Management</li>
+							<li>Incident Response Support</li>
+							<li>Security Awareness Training</li>
+							<li>SOHO Networking</li>
+						</ul>
+					</div>
 
-						<div class="prog">
-							<label for="">Wordpress</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:90%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Livewire</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:90%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">VueJS</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:90%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Rise Articulate</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:70%;" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Risk Management</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:30%" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Identity and Access Management</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:70%" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<div class="prog">
-							<label for="">Workflow Auomation (N8N, Zapier)</label>
-							<div class="progress">
-								<div class="progress-bar" style="width:80%" role="progressbar" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-
-
+					<div class="skill-group">
+						<h4>Tools & Collaboration</h4>
+						<ul class="skill-tags">
+							<li>Git</li>
+							<li>GitHub</li>
+							<li>Bitbucket</li>
+							<li>Jira</li>
+							<li>Asana</li>
+							<li>ClickUp</li>
+							<li>Rise Articulate</li>
+							<li>Client Requirements</li>
+						</ul>
 					</div>
 				</div>
 
@@ -1030,66 +1033,74 @@
 
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Proficient in designing and developing RESTful APIs.
+						Designing and developing RESTful APIs with clear documentation and maintainable backend logic.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Implementing AI to automate tasks, decision, or workflows.
+						Implementing AI-assisted workflows and automation using tools such as N8N, Zapier, and language models.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Experience in creating api and documentation.
+						Combining web development with prompt engineering, Hugging Face models, and RAG-style knowledge retrieval.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Back-End Web Developer
+						Designing AI-enabled features that connect user interfaces, backend APIs, automation flows, and structured data.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Cross Browser Testing &amp; Debugging
+						Building Laravel, CodeIgniter, Core PHP, MySQL, Livewire, Vue.js, and WordPress solutions.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						A little knowledge for web designing
+						Backend-focused full-stack development with practical frontend delivery when needed.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Advance Knowledge in Laravel Framework and Core PHP
+						Cross-browser testing, debugging, production support, and issue resolution.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Knowledge in Mysql and MongoDB
+						Responsive interface implementation using Bootstrap, CSS, JavaScript, and reusable components.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Knowledge in Github and Bitbucket version control
+						Advanced Laravel and Core PHP experience for custom business systems.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Knowledge in Asana, Clickup and Jira Work Management Platform
+						Database design and data handling with MySQL and MongoDB.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Able to conduct Phishing Awareness Training for Employees
+						Version control with GitHub and Bitbucket.
 					</li>
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Capable of Assisting in Incident Response Procedures
+						Project coordination using Asana, ClickUp, and Jira.
 					</li>
-
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Capable of fixing desktop or network related issues.
+						Phishing awareness training and security education content development.
 					</li>
-
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Capable of configuring soho.
+						Assisting incident response procedures with a security-first mindset.
 					</li>
 
 					<li>
 						<i class="fa-li fa fa-check"></i>
-						Basic SEO Knowledge.
+						Troubleshooting desktop, basic network, and small office/home office issues.
+					</li>
+
+					<li>
+						<i class="fa-li fa fa-check"></i>
+						Configuring SOHO network environments and access controls.
+					</li>
+
+					<li>
+						<i class="fa-li fa fa-check"></i>
+						Applying basic SEO, page structure, and performance improvements for business websites.
 					</li>
 				</ul>
 			</div>
@@ -1144,13 +1155,13 @@
 					<li>
 						<i class="fa-li fa fa-trophy text-warning"></i>
 
-						Udemy Comptia Security+ Course Certificate
+						Udemy CompTIA Security+ Course Certificate
 					</li>
 
 					<li>
 						<i class="fa-li fa fa-trophy text-warning"></i>
 
-						Udemy Comptia Network+ Course Certificate
+						Udemy CompTIA Network+ Course Certificate
 					</li>
 
 					<li>
@@ -1166,7 +1177,7 @@
 
 		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
 			<div class="w-100">
-				<h2 class="mb-5">My Sample Work</h2>
+				<h2 class="mb-5">Selected Project Work</h2>
 				<div class="container">
 					<!-- Filter Bar -->
 					<div class="portfolio-filter text-center mb-4">
@@ -1179,6 +1190,27 @@
 					<!-- latest proj-->
 
 					<div class="row">
+						<div class="col-md-4 portfolio" data-category="website">
+							<div class="portfolio-card">
+								<img src="ja-theme-vebotructiep.png" class="img-fluid portfolio-image"
+									alt="JA Theme iGaming Website">
+
+								<div class="portfolio-content">
+									<h4>JA Theme - iGaming Website</h4>
+									<p>
+										Maintained and supported an iGaming-focused live sports website with work across
+										website creation, deployment, Docker-based environments, virtualization, Nginx
+										configuration, website hardening, performance optimization, and production
+										reliability.
+									</p>
+
+									<a href="https://ja-theme.vebotructiep.live/" target="_blank" class="view-btn">
+										<i class="fas fa-eye"></i> View
+									</a>
+								</div>
+							</div>
+						</div>
+
 						<div class="col-md-4 portfolio" data-category="website">
 							<div class="portfolio-card">
 								<img src="arabmetricscore2.png" class="img-fluid portfolio-image" alt="Better Animals PH">
