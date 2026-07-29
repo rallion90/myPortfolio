@@ -6,7 +6,7 @@
 
 Building scalable web applications, real-time sports platforms, and modern WordPress ecosystems using PHP, JavaScript, Laravel, and Docker.
 
-🌍 Based in Dubai, UAE  
+🌍 Based in Dubai, UAE
 🚀 Passionate about performance, UI/UX, and scalable architecture
 
 [🌐 Portfolio Website](https://rallion90.github.io/myPortfolio) • [💻 GitHub](https://github.com/rallion90)
