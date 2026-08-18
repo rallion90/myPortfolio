@@ -319,6 +319,896 @@
 			font-weight: 700;
 			line-height: 1.2;
 		}
+
+		/**chat**/
+		:root {
+        --bg: #ffffff;
+        --panel: #ffffff;
+        --text: #0f172a;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --accent: #111827;
+        --accent-soft: #f8fafc;
+        --shadow: 0 28px 80px rgba(15, 23, 42, 0.16);
+        --ring: rgba(15, 23, 42, 0.08);
+      }
+
+     
+
+      .page {
+        min-height: 100vh;
+      }
+
+      .chat-widget {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 14px;
+      }
+
+      .chat-widget.has-notification .chat-toggle {
+        box-shadow:
+          0 18px 38px rgba(15, 23, 42, 0.22),
+          0 0 0 10px rgba(37, 99, 235, 0.08);
+      }
+
+      .chat-panel {
+        width: min(390px, calc(100vw - 28px));
+        height: min(72vh, 640px);
+        display: flex;
+        flex-direction: column;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+        pointer-events: none;
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .chat-widget.is-open .chat-panel {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+
+      .chat-header {
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--line);
+        background:
+          radial-gradient(circle at top left, rgba(148, 163, 184, 0.12), transparent 34%),
+          linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .chat-header-copy {
+        min-width: 0;
+      }
+
+      .chat-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .chat-status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #16a34a;
+        box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.12);
+      }
+
+      .chat-title {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      .chat-subtitle {
+        margin: 5px 0 0;
+        font-size: 13px;
+        color: var(--muted);
+        max-width: 28ch;
+      }
+
+      .chat-close {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--text);
+        font-size: 18px;
+        line-height: 1;
+        cursor: pointer;
+        transition: background 160ms ease, transform 160ms ease, border-color 160ms ease;
+      }
+
+      .chat-close:hover {
+        background: #ffffff;
+        border-color: #cbd5e1;
+        transform: translateY(-1px);
+      }
+
+      .chat-messages {
+        flex: 1;
+        padding: 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow-y: auto;
+        background:
+          radial-gradient(circle at top right, rgba(226, 232, 240, 0.45), transparent 30%),
+          linear-gradient(180deg, #fcfdff 0%, #ffffff 100%);
+      }
+
+      .message {
+        max-width: 88%;
+        padding: 12px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .message.bot {
+        background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        border: 1px solid #e2e8f0;
+        color: var(--text);
+        border-bottom-left-radius: 6px;
+      }
+
+      .message.user {
+        align-self: flex-end;
+        background: linear-gradient(135deg, #111827 0%, #334155 100%);
+        color: #ffffff;
+        border-bottom-right-radius: 6px;
+      }
+
+      .message-text {
+        white-space: pre-line;
+        word-break: break-word;
+      }
+
+      .message-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .message-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        padding: 0 14px;
+        border-radius: 999px;
+        border: 1px solid #cbd5e1;
+        background: #ffffff;
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      }
+
+      .message-action:hover {
+        transform: translateY(-1px);
+      }
+
+      .message-action.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .message-action.secondary {
+        background: #ffffff;
+        border-color: #cbd5e1;
+        color: var(--text);
+      }
+
+      .message-render {
+        margin-top: 12px;
+      }
+
+      .chart-card {
+        border: 1px solid #dbe3ef;
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .chart-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .chart-subtitle {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .chart-layout {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 14px;
+        align-items: center;
+        margin-top: 14px;
+      }
+
+      .pie-chart {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #f8fafc;
+      }
+
+      .chart-legend {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .legend-item {
+        display: grid;
+        grid-template-columns: 12px 1fr auto;
+        gap: 8px;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .legend-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .legend-label {
+        color: var(--text);
+      }
+
+      .legend-value {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .bar-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .bar-row {
+        display: grid;
+        grid-template-columns: 96px 1fr 34px;
+        gap: 8px;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .bar-label {
+        color: var(--text);
+      }
+
+      .bar-track {
+        height: 10px;
+        border-radius: 999px;
+        background: #e2e8f0;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        height: 100%;
+        border-radius: 999px;
+      }
+
+      .bar-value {
+        text-align: right;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .availability-card {
+        border: 1px solid #dbe3ef;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .availability-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .availability-subtitle {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .availability-grid {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .availability-item {
+        padding: 12px;
+        border-radius: 14px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+      }
+
+      .availability-label {
+        margin: 0 0 4px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .availability-value {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text);
+      }
+
+      .projects-card {
+        border: 1px solid #dbe3ef;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .projects-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .projects-subtitle {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .projects-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .project-item {
+        padding: 12px;
+        border-radius: 14px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+      }
+
+      .project-tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #3730a3;
+        font-size: 11px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .project-name {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .project-summary {
+        margin: 8px 0 0;
+        font-size: 12px;
+        line-height: 1.55;
+        color: var(--text);
+      }
+
+      .project-meta {
+        display: grid;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .project-meta-item {
+        padding: 10px;
+        border-radius: 12px;
+        background: #f8fafc;
+      }
+
+      .project-meta-label {
+        margin: 0 0 4px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .project-meta-value {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--text);
+      }
+
+      .timeline-card {
+        border: 1px solid #dbe3ef;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .timeline-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .timeline-subtitle {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .timeline-list {
+        position: relative;
+        display: grid;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .timeline-list::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: #cbd5e1;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 28px;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #111827;
+        border: 4px solid #e2e8f0;
+      }
+
+      .timeline-period {
+        margin: 0 0 6px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .timeline-role {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .timeline-company {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: #334155;
+        font-weight: 600;
+      }
+
+      .timeline-location {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .timeline-summary {
+        margin: 8px 0 0;
+        font-size: 12px;
+        line-height: 1.55;
+        color: var(--text);
+      }
+
+      .certifications-card {
+        border: 1px solid #dbe3ef;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .certifications-title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .certifications-subtitle {
+        margin: 4px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .certifications-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .certification-badge {
+        padding: 12px;
+        border-radius: 14px;
+        border: 1px solid #e2e8f0;
+        background: #ffffff;
+      }
+
+      .certification-badge.primary {
+        background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+        border-color: #111827;
+        color: #ffffff;
+      }
+
+      .certification-badge.secondary {
+        background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+        border-color: #bfdbfe;
+      }
+
+      .certification-badge.subtle {
+        background: #ffffff;
+        border-color: #e2e8f0;
+      }
+
+      .certification-category {
+        margin: 0 0 8px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: inherit;
+        opacity: 0.85;
+      }
+
+      .certification-name {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.45;
+        font-weight: 700;
+        color: inherit;
+      }
+
+      .certification-code {
+        margin: 6px 0 0;
+        font-size: 11px;
+        color: inherit;
+        opacity: 0.82;
+      }
+
+      .chat-input-area {
+        padding: 14px;
+        border-top: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .chat-form {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 4px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #ffffff;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      }
+
+      .chat-input {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 14px;
+        font-size: 14px;
+        outline: none;
+        background: transparent;
+      }
+
+      .chat-input:focus {
+        background: transparent;
+      }
+
+      .send-button,
+      .chat-toggle {
+        border: none;
+        cursor: pointer;
+        transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+      }
+
+      .send-button {
+        min-width: 76px;
+        min-height: 42px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0 16px;
+      }
+
+      .send-button:hover,
+      .chat-toggle:hover {
+        transform: translateY(-2px);
+      }
+
+      .send-button:disabled {
+        opacity: 0.65;
+        cursor: wait;
+      }
+
+      .chat-toggle {
+        width: 64px;
+        height: 64px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #111827 0%, #334155 100%);
+        color: #ffffff;
+        box-shadow: 0 18px 38px rgba(15, 23, 42, 0.22);
+        font-size: 24px;
+        position: relative;
+      }
+
+      .chat-toggle::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ef4444;
+        border: 2px solid #ffffff;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: opacity 160ms ease, transform 160ms ease;
+      }
+
+      .chat-widget.has-notification .chat-toggle::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .chat-pulse {
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        border: 1px solid rgba(37, 99, 235, 0.28);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .chat-widget.has-notification .chat-pulse {
+        opacity: 1;
+        animation: chatPulse 2.1s ease-out infinite;
+      }
+
+      .chat-toggle-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        position: relative;
+      }
+
+      .chat-toggle-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .chat-toggle-label {
+        background: #ffffff;
+        color: var(--text);
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        font-size: 13px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .chat-preview {
+        max-width: min(280px, calc(100vw - 108px));
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 18px 18px 4px 18px;
+        background: #ffffff;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+        color: var(--text);
+        display: none;
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .chat-widget.has-notification .chat-preview {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .chat-preview-title {
+        margin: 0 0 4px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .chat-preview-text {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      @keyframes chatPulse {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.55;
+        }
+
+        70% {
+          transform: scale(1.18);
+          opacity: 0;
+        }
+
+        100% {
+          transform: scale(1.18);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .chat-widget {
+          right: 16px;
+          bottom: 16px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .chat-widget {
+          right: 12px;
+          left: 12px;
+          bottom: max(12px, env(safe-area-inset-bottom));
+          align-items: stretch;
+        }
+
+        .chat-panel {
+          width: 100%;
+          height: min(78vh, 720px);
+          border-radius: 24px;
+        }
+
+        .chat-toggle-wrap {
+          align-items: flex-end;
+        }
+
+        .chat-toggle-label {
+          display: none;
+        }
+
+        .chat-preview {
+          max-width: min(250px, calc(100vw - 92px));
+        }
+
+        .chart-layout {
+          grid-template-columns: 1fr;
+          justify-items: center;
+        }
+
+        .chart-legend {
+          width: 100%;
+        }
+
+        .certifications-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .chat-header {
+          padding: 14px;
+        }
+
+        .chat-subtitle {
+          max-width: none;
+        }
+
+        .chat-messages {
+          padding: 14px 12px;
+        }
+
+        .message {
+          max-width: 92%;
+          font-size: 13px;
+        }
+
+        .send-button {
+          min-width: 64px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .chat-widget {
+          right: 0;
+          left: 0;
+          bottom: 0;
+        }
+
+        .chat-panel {
+          width: 100%;
+          height: calc(100vh - 86px);
+          border-radius: 22px 22px 0 0;
+        }
+
+        .chat-toggle-wrap {
+          padding: 0 12px 12px;
+        }
+
+        .chat-preview {
+          margin-right: 12px;
+        }
+      }
 	</style>
 
 
@@ -2030,6 +2920,66 @@
 		</div>
 	</div>
 
+	<section
+      class="chat-widget"
+      id="chatWidget"
+      data-api-url="http://localhost:3000/api/v1/assistant/message"
+      data-events-url="http://localhost:3000/api/v1/events"
+      data-storage-key="ralph-agent-conversation-id"
+    >
+      <div class="chat-panel" id="chatPanel" aria-hidden="true">
+        <header class="chat-header">
+          <div class="chat-header-copy">
+            <h2 class="chat-title">Ralph Agent AI</h2>
+            <p class="chat-subtitle">Ask about Ralph Rallion Laynes, his work, projects, and AI-related experience.</p>
+          </div>
+          <button class="chat-close" id="chatClose" type="button" aria-label="Close chat">×</button>
+        </header>
+
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot">
+            <div class="message-text">Hi, welcome. I can help you learn more about Ralph’s experience, projects, technical skills, and AI work. If there’s anything specific you’d like to know, just ask.</div>
+          </div>
+          <div class="message bot">
+            <div class="message-text">You can ask me about Ralph’s background, skills, projects, certifications, availability, or contact details. I can also show simple visuals like charts, project cards, and career timeline. If you’d like to talk, just go ahead.</div>
+          </div>
+        </div>
+
+        <div class="chat-input-area">
+          <form class="chat-form" id="chatForm">
+            <input
+              class="chat-input"
+              id="chatInput"
+              type="text"
+              placeholder="Type a message..."
+              aria-label="Chat message"
+            />
+            <button class="send-button" id="sendButton" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="chat-toggle-wrap">
+        <div class="chat-preview" id="chatPreview" aria-hidden="true">
+          <p class="chat-preview-title">Ralph AI</p>
+          <p class="chat-preview-text">Hi, I’m Ralph AI. Same name as my developer, but I do not ask for coffee breaks. This portfolio chat is also a sample AI project using Ollama-powered local models, structured outputs, and token-aware context handling to stay efficient even when the request gets longer. Feel free to use me!</p>
+        </div>
+        <div class="chat-toggle-row">
+          <span class="chat-toggle-label">Chat with Ralph AI</span>
+          <button
+            class="chat-toggle"
+            id="chatToggle"
+            type="button"
+            aria-label="Open chat"
+            aria-expanded="false"
+          >
+            <span class="chat-pulse" aria-hidden="true"></span>
+            💬
+          </button>
+        </div>
+      </div>
+    </section>
+
 
 
 	<!-- Bootstrap core JavaScript -->
@@ -2200,3 +3150,745 @@
 
 
 </script>
+
+<script>
+      const chatWidget = document.getElementById('chatWidget');
+      const apiUrl = chatWidget.dataset.apiUrl || 'http://localhost:3000/api/v1/assistant/message';
+      const eventsUrl = chatWidget.dataset.eventsUrl || 'http://localhost:3000/api/v1/events';
+      const conversationStorageKey =
+        chatWidget.dataset.storageKey || 'ralph-agent-conversation-id';
+      const chatToggle = document.getElementById('chatToggle');
+      const chatClose = document.getElementById('chatClose');
+      const chatPanel = document.getElementById('chatPanel');
+      const chatMessages = document.getElementById('chatMessages');
+      const chatForm = document.getElementById('chatForm');
+      const chatInput = document.getElementById('chatInput');
+      const sendButton = document.getElementById('sendButton');
+      const chatPreview = document.getElementById('chatPreview');
+      let conversationId = localStorage.getItem(conversationStorageKey) || '';
+      let hasPlayedNotification = false;
+      trackEvent('page_visit');
+
+      window.setTimeout(() => {
+        if (!chatWidget.classList.contains('is-open')) {
+          chatWidget.classList.add('has-notification');
+          chatPreview.setAttribute('aria-hidden', 'false');
+          playNotificationSound();
+        }
+      }, 900);
+
+      chatToggle.addEventListener('click', toggleChat);
+      chatClose.addEventListener('click', closeChat);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeChat();
+        }
+      });
+
+      chatForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const message = chatInput.value.trim();
+
+        if (!message) {
+          return;
+        }
+
+        appendMessage('user', { text: message });
+        chatInput.value = '';
+        setLoadingState(true);
+
+        const typingMessage = appendMessage('bot', { text: 'Thinking...' });
+
+        try {
+          const payload = {
+            message,
+          };
+
+          if (conversationId) {
+            payload.conversationId = conversationId;
+          }
+
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const result = await response.json();
+
+          if (!response.ok || !result.success) {
+            throw new Error(result.message || 'Unable to get a response from Ralph Agent AI.');
+          }
+
+          conversationId = result.data.conversationId || conversationId;
+
+          if (conversationId) {
+            localStorage.setItem(conversationStorageKey, conversationId);
+          }
+
+          renderMessageContent(typingMessage, {
+            text: result.data.reply || 'No reply received.',
+            actions: result.data.actions || [],
+            render: result.data.render || null,
+          });
+        } catch (error) {
+          renderMessageContent(typingMessage, {
+            text:
+              error.message ||
+              'Connection failed. Make sure the API server is running on localhost:3000.',
+          });
+        } finally {
+          setLoadingState(false);
+          scrollMessagesToBottom();
+        }
+      });
+
+      function appendMessage(role, content) {
+        const messageElement = document.createElement('div');
+        messageElement.className = `message ${role}`;
+        renderMessageContent(messageElement, content);
+        chatMessages.appendChild(messageElement);
+        scrollMessagesToBottom();
+        return messageElement;
+      }
+
+      function renderMessageContent(messageElement, content) {
+        const normalizedContent =
+          typeof content === 'string'
+            ? { text: content, actions: [], render: null }
+            : {
+                text: content.text || '',
+                actions: content.actions || [],
+                render: content.render || null,
+              };
+
+        messageElement.innerHTML = '';
+
+        const cleanedText = String(normalizedContent.text || '')
+          .replace(/\t+/g, ' ')
+          .replace(/[ ]{2,}/g, ' ')
+          .replace(/\n{3,}/g, '\n\n')
+          .trim();
+
+        const textElement = document.createElement('div');
+        textElement.className = 'message-text';
+        textElement.textContent = cleanedText;
+        messageElement.appendChild(textElement);
+
+        if (normalizedContent.actions.length > 0) {
+          const actionsElement = document.createElement('div');
+          actionsElement.className = 'message-actions';
+
+          normalizedContent.actions.forEach((action) => {
+            const actionElement = document.createElement('a');
+            actionElement.className = `message-action ${action.variant || 'secondary'}`;
+            actionElement.href = action.url;
+            actionElement.target = '_blank';
+            actionElement.rel = 'noreferrer';
+            actionElement.textContent = action.label;
+
+            if (action.download) {
+              actionElement.setAttribute('download', '');
+            }
+
+            actionElement.addEventListener('click', () => {
+              handleActionClick(action);
+            });
+
+            actionsElement.appendChild(actionElement);
+          });
+
+          messageElement.appendChild(actionsElement);
+        }
+
+        if (normalizedContent.render) {
+          const renderElement = document.createElement('div');
+          renderElement.className = 'message-render';
+          renderElement.appendChild(buildRenderElement(normalizedContent.render));
+          messageElement.appendChild(renderElement);
+        }
+      }
+
+      function setLoadingState(isLoading) {
+        chatInput.disabled = isLoading;
+        sendButton.disabled = isLoading;
+        sendButton.textContent = isLoading ? '...' : 'Send';
+      }
+
+      function scrollMessagesToBottom() {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function toggleChat() {
+        if (chatWidget.classList.contains('is-open')) {
+          closeChat();
+          return;
+        }
+
+        openChat();
+      }
+
+      function openChat() {
+        chatWidget.classList.add('is-open');
+        chatWidget.classList.remove('has-notification');
+        chatPanel.setAttribute('aria-hidden', 'false');
+        chatPreview.setAttribute('aria-hidden', 'true');
+        chatToggle.setAttribute('aria-expanded', 'true');
+        chatToggle.setAttribute('aria-label', 'Close chat');
+        window.setTimeout(() => chatInput.focus(), 120);
+      }
+
+      function closeChat() {
+        chatWidget.classList.remove('is-open');
+        chatPanel.setAttribute('aria-hidden', 'true');
+        chatToggle.setAttribute('aria-expanded', 'false');
+        chatToggle.setAttribute('aria-label', 'Open chat');
+      }
+
+      function playNotificationSound() {
+        if (hasPlayedNotification) {
+          return;
+        }
+
+        try {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+
+          if (!AudioContextClass) {
+            return;
+          }
+
+          const audioContext = new AudioContextClass();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+
+          oscillator.type = 'sine';
+          oscillator.frequency.value = 880;
+          gainNode.gain.setValueAtTime(0.0001, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.018, audioContext.currentTime + 0.02);
+          gainNode.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.18);
+
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.18);
+
+          oscillator.onended = () => {
+            if (audioContext.state !== 'closed') {
+              audioContext.close().catch(() => {});
+            }
+          };
+
+          hasPlayedNotification = true;
+        } catch (_error) {
+          // Ignore autoplay/audio limitations and keep the visual notification.
+        }
+      }
+
+      function handleActionClick(action) {
+        if (!action || !action.url) {
+          return;
+        }
+
+        if (action.download) {
+          trackEvent('cv_download', {
+            targetLabel: action.label || 'Download CV',
+            targetUrl: action.url,
+          });
+          return;
+        }
+
+        if (String(action.url).startsWith('mailto:')) {
+          trackEvent('email_click', {
+            targetLabel: action.label || 'Email Ralph',
+            targetUrl: action.url,
+          });
+        }
+      }
+
+      function trackEvent(eventType, extra = {}) {
+        const payload = {
+          eventType,
+          language: navigator.language || '',
+          timezone: getVisitorTimezone(),
+          ...extra,
+        };
+
+        const json = JSON.stringify(payload);
+
+        if (navigator.sendBeacon) {
+          const blob = new Blob([json], { type: 'application/json' });
+          navigator.sendBeacon(eventsUrl, blob);
+          return;
+        }
+
+        fetch(eventsUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: json,
+          keepalive: true,
+        }).catch(() => {});
+      }
+
+      function getVisitorCountry() {
+        const locale = navigator.language || '';
+
+        try {
+          if (typeof Intl !== 'undefined' && typeof Intl.Locale === 'function') {
+            const region = new Intl.Locale(locale).region;
+
+            if (region) {
+              return regionToCountry(region);
+            }
+          }
+        } catch (_error) {
+          // Ignore locale parsing errors and fall back below.
+        }
+
+        const fallbackRegion = String(locale).split('-')[1];
+
+        if (fallbackRegion) {
+          return regionToCountry(fallbackRegion);
+        }
+
+        const timezoneCountry = timezoneToCountry(getVisitorTimezone());
+        return timezoneCountry || 'Unknown';
+      }
+
+      function getVisitorTimezone() {
+        try {
+          return Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        } catch (_error) {
+          return '';
+        }
+      }
+
+      function regionToCountry(region) {
+        const countryMap = {
+          AE: 'United Arab Emirates',
+          AU: 'Australia',
+          CA: 'Canada',
+          DE: 'Germany',
+          EG: 'Egypt',
+          ES: 'Spain',
+          FR: 'France',
+          GB: 'United Kingdom',
+          IE: 'Ireland',
+          IN: 'India',
+          IT: 'Italy',
+          MY: 'Malaysia',
+          NZ: 'New Zealand',
+          PH: 'Philippines',
+          PK: 'Pakistan',
+          QA: 'Qatar',
+          SA: 'Saudi Arabia',
+          SG: 'Singapore',
+          US: 'United States',
+        };
+
+        return countryMap[String(region || '').toUpperCase()] || String(region || '').toUpperCase();
+      }
+
+      function timezoneToCountry(timezone) {
+        const timezoneMap = {
+          'Asia/Dubai': 'United Arab Emirates',
+          'Asia/Karachi': 'Pakistan',
+          'Asia/Kolkata': 'India',
+          'Asia/Manila': 'Philippines',
+          'Asia/Qatar': 'Qatar',
+          'Asia/Riyadh': 'Saudi Arabia',
+          'Asia/Singapore': 'Singapore',
+          'Australia/Sydney': 'Australia',
+          'Europe/Berlin': 'Germany',
+          'Europe/Dublin': 'Ireland',
+          'Europe/London': 'United Kingdom',
+          'Europe/Madrid': 'Spain',
+          'Europe/Paris': 'France',
+          'Pacific/Auckland': 'New Zealand',
+        };
+
+        return timezoneMap[timezone] || '';
+      }
+
+      function buildRenderElement(render) {
+        if (render.type === 'pie_chart') {
+          return buildPieChartElement(render);
+        }
+
+        if (render.type === 'bar_chart') {
+          return buildBarChartElement(render);
+        }
+
+        if (render.type === 'availability_card') {
+          return buildAvailabilityCardElement(render);
+        }
+
+        if (render.type === 'contact_info_card') {
+          return buildAvailabilityCardElement(render);
+        }
+
+        if (render.type === 'project_cards') {
+          return buildProjectCardsElement(render);
+        }
+
+        if (render.type === 'experience_timeline') {
+          return buildExperienceTimelineElement(render);
+        }
+
+        if (render.type === 'certification_badges') {
+          return buildCertificationBadgesElement(render);
+        }
+
+        const fallback = document.createElement('div');
+        fallback.textContent = 'Unsupported render type.';
+        return fallback;
+      }
+
+      function buildPieChartElement(render) {
+        const card = buildChartCard(render);
+        const layout = document.createElement('div');
+        layout.className = 'chart-layout';
+
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '0 0 120 120');
+        svg.setAttribute('class', 'pie-chart');
+
+        const radius = 42;
+        const circumference = 2 * Math.PI * radius;
+        let offset = 0;
+
+        render.items.forEach((item) => {
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          circle.setAttribute('cx', '60');
+          circle.setAttribute('cy', '60');
+          circle.setAttribute('r', String(radius));
+          circle.setAttribute('fill', 'transparent');
+          circle.setAttribute('stroke', item.color);
+          circle.setAttribute('stroke-width', '20');
+          circle.setAttribute('stroke-dasharray', `${(item.value / 100) * circumference} ${circumference}`);
+          circle.setAttribute('stroke-dashoffset', String(-offset));
+          circle.setAttribute('transform', 'rotate(-90 60 60)');
+          circle.setAttribute('stroke-linecap', 'butt');
+          svg.appendChild(circle);
+          offset += (item.value / 100) * circumference;
+        });
+
+        const center = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        center.setAttribute('cx', '60');
+        center.setAttribute('cy', '60');
+        center.setAttribute('r', '24');
+        center.setAttribute('fill', '#ffffff');
+        svg.appendChild(center);
+
+        const legend = buildLegend(render.items);
+        layout.appendChild(svg);
+        layout.appendChild(legend);
+        card.appendChild(layout);
+
+        return card;
+      }
+
+      function buildBarChartElement(render) {
+        const card = buildChartCard(render);
+        const chart = document.createElement('div');
+        chart.className = 'bar-chart';
+
+        render.items.forEach((item) => {
+          const row = document.createElement('div');
+          row.className = 'bar-row';
+
+          const label = document.createElement('div');
+          label.className = 'bar-label';
+          label.textContent = item.label;
+
+          const track = document.createElement('div');
+          track.className = 'bar-track';
+
+          const fill = document.createElement('div');
+          fill.className = 'bar-fill';
+          fill.style.width = `${item.value}%`;
+          fill.style.background = item.color;
+          track.appendChild(fill);
+
+          const value = document.createElement('div');
+          value.className = 'bar-value';
+          value.textContent = `${item.value}%`;
+
+          row.appendChild(label);
+          row.appendChild(track);
+          row.appendChild(value);
+          chart.appendChild(row);
+        });
+
+        card.appendChild(chart);
+        return card;
+      }
+
+      function buildChartCard(render) {
+        const card = document.createElement('div');
+        card.className = 'chart-card';
+
+        const title = document.createElement('h4');
+        title.className = 'chart-title';
+        title.textContent = render.title || 'Chart';
+
+        const subtitle = document.createElement('p');
+        subtitle.className = 'chart-subtitle';
+        subtitle.textContent = render.subtitle || '';
+
+        card.appendChild(title);
+        card.appendChild(subtitle);
+
+        return card;
+      }
+
+      function buildAvailabilityCardElement(render) {
+        const card = document.createElement('div');
+        card.className = 'availability-card';
+
+        const title = document.createElement('h4');
+        title.className = 'availability-title';
+        title.textContent = render.title || 'Availability';
+
+        const subtitle = document.createElement('p');
+        subtitle.className = 'availability-subtitle';
+        subtitle.textContent = render.subtitle || '';
+
+        const grid = document.createElement('div');
+        grid.className = 'availability-grid';
+
+        (render.fields || []).forEach((field) => {
+          const item = document.createElement('div');
+          item.className = 'availability-item';
+
+          const label = document.createElement('p');
+          label.className = 'availability-label';
+          label.textContent = field.label;
+
+          const value = document.createElement('p');
+          value.className = 'availability-value';
+          value.textContent = field.value;
+
+          item.appendChild(label);
+          item.appendChild(value);
+          grid.appendChild(item);
+        });
+
+        card.appendChild(title);
+        card.appendChild(subtitle);
+        card.appendChild(grid);
+
+        return card;
+      }
+
+      function buildProjectCardsElement(render) {
+        const card = document.createElement('div');
+        card.className = 'projects-card';
+
+        const title = document.createElement('h4');
+        title.className = 'projects-title';
+        title.textContent = render.title || 'Projects';
+
+        const subtitle = document.createElement('p');
+        subtitle.className = 'projects-subtitle';
+        subtitle.textContent = render.subtitle || '';
+
+        const list = document.createElement('div');
+        list.className = 'projects-list';
+
+        (render.items || []).forEach((item) => {
+          const project = document.createElement('div');
+          project.className = 'project-item';
+
+          if (item.tag) {
+            const tag = document.createElement('div');
+            tag.className = 'project-tag';
+            tag.textContent = item.tag;
+            project.appendChild(tag);
+          }
+
+          const name = document.createElement('h5');
+          name.className = 'project-name';
+          name.textContent = item.title;
+
+          const summary = document.createElement('p');
+          summary.className = 'project-summary';
+          summary.textContent = item.summary;
+
+          const meta = document.createElement('div');
+          meta.className = 'project-meta';
+
+          if (item.stack) {
+            meta.appendChild(buildProjectMetaItem('Stack', item.stack));
+          }
+
+          if (item.impact) {
+            meta.appendChild(buildProjectMetaItem('Impact', item.impact));
+          }
+
+          project.appendChild(name);
+          project.appendChild(summary);
+          project.appendChild(meta);
+          list.appendChild(project);
+        });
+
+        card.appendChild(title);
+        card.appendChild(subtitle);
+        card.appendChild(list);
+
+        return card;
+      }
+
+      function buildProjectMetaItem(labelText, valueText) {
+        const item = document.createElement('div');
+        item.className = 'project-meta-item';
+
+        const label = document.createElement('p');
+        label.className = 'project-meta-label';
+        label.textContent = labelText;
+
+        const value = document.createElement('p');
+        value.className = 'project-meta-value';
+        value.textContent = valueText;
+
+        item.appendChild(label);
+        item.appendChild(value);
+
+        return item;
+      }
+
+      function buildExperienceTimelineElement(render) {
+        const card = document.createElement('div');
+        card.className = 'timeline-card';
+
+        const title = document.createElement('h4');
+        title.className = 'timeline-title';
+        title.textContent = render.title || 'Experience Timeline';
+
+        const subtitle = document.createElement('p');
+        subtitle.className = 'timeline-subtitle';
+        subtitle.textContent = render.subtitle || '';
+
+        const list = document.createElement('div');
+        list.className = 'timeline-list';
+
+        (render.items || []).forEach((item) => {
+          const timelineItem = document.createElement('div');
+          timelineItem.className = 'timeline-item';
+
+          const dot = document.createElement('div');
+          dot.className = 'timeline-dot';
+
+          const period = document.createElement('p');
+          period.className = 'timeline-period';
+          period.textContent = item.period;
+
+          const role = document.createElement('h5');
+          role.className = 'timeline-role';
+          role.textContent = item.role;
+
+          const company = document.createElement('p');
+          company.className = 'timeline-company';
+          company.textContent = item.company;
+
+          const location = document.createElement('p');
+          location.className = 'timeline-location';
+          location.textContent = item.location;
+
+          const summary = document.createElement('p');
+          summary.className = 'timeline-summary';
+          summary.textContent = item.summary;
+
+          timelineItem.appendChild(dot);
+          timelineItem.appendChild(period);
+          timelineItem.appendChild(role);
+          timelineItem.appendChild(company);
+          timelineItem.appendChild(location);
+          timelineItem.appendChild(summary);
+          list.appendChild(timelineItem);
+        });
+
+        card.appendChild(title);
+        card.appendChild(subtitle);
+        card.appendChild(list);
+
+        return card;
+      }
+
+      function buildCertificationBadgesElement(render) {
+        const card = document.createElement('div');
+        card.className = 'certifications-card';
+
+        const title = document.createElement('h4');
+        title.className = 'certifications-title';
+        title.textContent = render.title || 'Certifications';
+
+        const subtitle = document.createElement('p');
+        subtitle.className = 'certifications-subtitle';
+        subtitle.textContent = render.subtitle || '';
+
+        const grid = document.createElement('div');
+        grid.className = 'certifications-grid';
+
+        (render.items || []).forEach((item) => {
+          const badge = document.createElement('div');
+          badge.className = `certification-badge ${item.emphasis || 'subtle'}`;
+
+          const category = document.createElement('p');
+          category.className = 'certification-category';
+          category.textContent = item.category;
+
+          const name = document.createElement('h5');
+          name.className = 'certification-name';
+          name.textContent = item.name;
+
+          const code = document.createElement('p');
+          code.className = 'certification-code';
+          code.textContent = item.code;
+
+          badge.appendChild(category);
+          badge.appendChild(name);
+          badge.appendChild(code);
+          grid.appendChild(badge);
+        });
+
+        card.appendChild(title);
+        card.appendChild(subtitle);
+        card.appendChild(grid);
+
+        return card;
+      }
+
+      function buildLegend(items) {
+        const legend = document.createElement('div');
+        legend.className = 'chart-legend';
+
+        items.forEach((item) => {
+          const legendItem = document.createElement('div');
+          legendItem.className = 'legend-item';
+
+          const dot = document.createElement('div');
+          dot.className = 'legend-dot';
+          dot.style.background = item.color;
+
+          const label = document.createElement('div');
+          label.className = 'legend-label';
+          label.textContent = item.label;
+
+          const value = document.createElement('div');
+          value.className = 'legend-value';
+          value.textContent = `${item.value}%`;
+
+          legendItem.appendChild(dot);
+          legendItem.appendChild(label);
+          legendItem.appendChild(value);
+          legend.appendChild(legendItem);
+        });
+
+        return legend;
+      }
+    </script>
