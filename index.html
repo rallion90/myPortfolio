@@ -36,6 +36,9 @@
 	<!--testing-->
 
 	<style type="text/css">
+		* {
+	        box-sizing: border-box;
+	      }
 		.navbar {
 			background-color: black;
 		}
@@ -332,13 +335,6 @@
         --shadow: 0 28px 80px rgba(15, 23, 42, 0.16);
         --ring: rgba(15, 23, 42, 0.08);
       }
-
-     
-
-      .page {
-        min-height: 100vh;
-      }
-
       .chat-widget {
         position: fixed;
         right: 20px;
@@ -1137,7 +1133,7 @@
 
         .chat-panel {
           width: 100%;
-          height: min(78vh, 720px);
+          height: min(82vh, 720px);
           border-radius: 24px;
         }
 
@@ -1151,6 +1147,12 @@
 
         .chat-preview {
           max-width: min(250px, calc(100vw - 92px));
+        }
+
+        .chat-toggle {
+          width: 58px;
+          height: 58px;
+          font-size: 22px;
         }
 
         .chart-layout {
@@ -1183,6 +1185,25 @@
           font-size: 13px;
         }
 
+        .message-actions {
+          flex-direction: column;
+        }
+
+        .message-action {
+          width: 100%;
+          min-height: 40px;
+        }
+
+        .chat-form {
+          align-items: stretch;
+          border-radius: 22px;
+          padding: 6px;
+        }
+
+        .chat-input {
+          padding: 11px 12px;
+        }
+
         .send-button {
           min-width: 64px;
         }
@@ -1197,7 +1218,7 @@
 
         .chat-panel {
           width: 100%;
-          height: calc(100vh - 86px);
+          height: calc(100vh - 84px - env(safe-area-inset-bottom));
           border-radius: 22px 22px 0 0;
         }
 
@@ -1206,7 +1227,74 @@
         }
 
         .chat-preview {
-          margin-right: 12px;
+          display: none;
+        }
+
+        .chat-header {
+          padding: 12px;
+          gap: 10px;
+        }
+
+        .chat-title {
+          font-size: 16px;
+        }
+
+        .chat-subtitle {
+          font-size: 12px;
+        }
+
+        .chat-close {
+          width: 34px;
+          height: 34px;
+        }
+
+        .chat-messages {
+          padding: 12px 10px;
+          gap: 10px;
+        }
+
+        .message {
+          max-width: 96%;
+          padding: 11px 12px;
+          font-size: 13px;
+        }
+
+        .chart-card,
+        .availability-card,
+        .projects-card,
+        .timeline-card,
+        .certifications-card {
+          padding: 12px;
+          border-radius: 16px;
+        }
+
+        .bar-row {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+
+        .bar-value {
+          text-align: left;
+        }
+
+        .chat-input-area {
+          padding: 10px;
+        }
+
+        .chat-form {
+          gap: 6px;
+          border-radius: 18px;
+        }
+
+        .send-button {
+          min-width: 58px;
+          min-height: 40px;
+          padding: 0 14px;
+          font-size: 13px;
+        }
+
+        .chat-toggle-wrap {
+          padding-bottom: calc(12px + env(safe-area-inset-bottom));
         }
       }
 	</style>
